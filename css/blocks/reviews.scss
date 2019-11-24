@@ -1,0 +1,52 @@
+.reviews{
+  &::after{
+    content: '';
+    background: url('/img/bg/berries.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    position: absolute;
+    bottom: -9rem;
+    width: 135px;
+    height: 193px;
+  }
+  &::before{
+    content: '';
+    background: url('/img/bg/berry.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: absolute;
+    top: 3.6rem;
+    right: 1.4rem;
+    width: 150px;
+    height: 86px;
+  }
+}
+
+.reviews__title{
+  margin: 3.5rem 0;
+}
+
+
+.reviews__list{
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0 6rem;
+}
+
+.reviews__item{
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+  cursor: pointer;
+  &--active{
+    border: 6px solid #0f5a47;
+  }
+}
+
+.reviews__photo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

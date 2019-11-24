@@ -1,0 +1,39 @@
+// colors
+$title-black: #0d0d0d;//поправить цвет
+$description-gray: #666;
+$content-background-light: #61c4d9;
+$content-background-dark: #00accf;
+$white: #fff;
+$black: #000;
+$green-dark: #0f5a47;
+
+//colors why-chocco
+$why-chocco-light-grey: #f2f5f4;
+
+//feedback
+$feedback-title-black: #323232;
+
+//normalize
+@import "_misc/normalize.scss";
+
+// setups
+// @import "_misc/mixins";
+@import "_misc/fonts";
+@import "_misc/layout";
+
+// blocks
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/phone";
+@import "blocks/pagination";
+@import "blocks/promo";
+@import "blocks/btn";
+@import "blocks/advantage";
+@import "blocks/about-us";
+@import "blocks/why-chocco";
+@import "blocks/reviews";
+@import "blocks/feedback";
+
+
+
+

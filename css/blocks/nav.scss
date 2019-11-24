@@ -1,0 +1,13 @@
+.nav__list{
+  list-style: none;
+  padding: 0;
+}
+.nav__item{
+  display: inline-block;
+  margin: 0 0.75rem;
+}
+.nav__link{
+  font-size: 1.8rem;
+  color: $white;
+  padding: 0.5rem;
+}

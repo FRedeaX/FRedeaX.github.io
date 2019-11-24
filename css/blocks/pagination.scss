@@ -1,0 +1,37 @@
+.pagination{
+  position: fixed;
+  top: 20.1rem;
+  right: 7.4rem;
+  z-index: 2;
+}
+.pagination__list{
+  list-style: none;
+}
+.pagination__item{
+  position: relative;
+  margin: 0.6rem 0;
+
+}
+.pagination__link{
+  display: block;
+  width: 15px;
+  height: 15px;    
+  cursor: pointer;
+  &::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    margin: -2.5px -2.5px 0 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: $white;
+  }
+
+  &--active{
+    border: 1px solid $white;
+    border-radius: 50%;
+  }
+}

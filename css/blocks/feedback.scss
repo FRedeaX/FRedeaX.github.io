@@ -1,0 +1,25 @@
+.feedback{
+  display: flex;
+  padding: 5.1rem 4rem 3.4rem;
+  background: url('../img/bg/branch.jpg');
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.feedback__photo{
+  width: 25.4rem;
+  height: 26rem;
+  object-fit: cover;
+}
+
+.feedback__content{
+  padding: 1rem 11.8rem 1rem 1.8rem;
+}
+
+.feedback__title{
+  font-size: 3rem;
+}
+.feedback__description{
+  line-height: 2.15rem;
+  margin: 3rem 0;
+}

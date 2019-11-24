@@ -1,0 +1,116 @@
+html,
+body {
+  height: 100%;
+  font-size: 10px;
+}
+
+body {
+  position: relative;
+  font-family: "Alegreya Sans", sans-serif; //@include ubuntu();
+}
+
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section {
+  height: 100vh;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.title{
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $title-black;
+
+  &--color{
+    &--white{
+      color: $white;
+    }
+    &--black{
+      color: $black;
+    }
+    &--feedback{
+      color: $feedback-title-black;
+    }
+  }
+  &--weight{
+    &--medium{
+      font-weight: 500;
+    }
+  }
+  &--centered {
+    text-align: center;
+  }
+  &--transform{
+    &--none{
+      text-transform: none;
+    }
+  }
+}
+
+.description{
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: $description-gray;
+  
+  &--color{
+    &--white{
+      color: $white;
+    }
+  }
+  &--weight{
+    &--light{
+      font-weight: 300;
+    }
+    &--medium{
+      font-weight: 500;
+    }
+  }
+  &--centered {
+    text-align: center;
+  }
+}
+// tag styles reset
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+
+  & > li {
+    list-style: none;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}

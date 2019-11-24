@@ -1,0 +1,26 @@
+.phone__icon{
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  fill: $white;
+  margin-right: 6px;
+
+  &--color{
+    &--green{
+      fill: $green-dark
+    }
+  }
+}
+
+.phone__number{
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  color: $white;
+
+  &--color{
+    &--green{
+      color: $green-dark
+    }
+  }
+}

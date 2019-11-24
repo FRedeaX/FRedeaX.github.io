@@ -1,0 +1,46 @@
+.promo{
+  background: url('../img/bg/sheet.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-color: $content-background-light;
+  &::after{
+    content: '';
+    background: url('/img/bg/bg-chocco.png');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    position: absolute;
+    bottom: -5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1053px;
+    height: 645px;
+    z-index: 1;
+  }
+}
+
+.promo__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.promo_content{
+  width: 50%;
+  z-index: 2;
+}
+
+.promo__title{
+  font-size: 6rem;
+  line-height: 6rem;
+}
+
+.promo__description{
+  font-size: 2.1rem;
+  line-height: 2.5rem;
+  margin-top: 0.7rem;
+}
+
+.promo__advantages{
+  padding: 12rem 0 5rem 0;
+}

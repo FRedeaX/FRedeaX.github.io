@@ -1,0 +1,19 @@
+.advantage{
+  padding: 1rem 0;
+}
+.advantage__list{
+  display: flex;
+  // margin-top: 6.8rem;
+}
+.advantage__item{
+  display: flex;
+  margin-right: 4.5rem;
+}
+.advantage__icon{
+  width: 4.5rem;
+  stroke: #b0f7ff;
+  margin-right: 1rem;
+}
+.advantage__description{
+  font-size: 1.6rem;
+}
