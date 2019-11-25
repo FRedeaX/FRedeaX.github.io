@@ -1,3 +1,6 @@
+.phone{
+
+}
 .phone__icon{
   display: inline-block;
   width: 12px;
@@ -17,10 +20,24 @@
   font-size: 2.4rem;
   text-transform: uppercase;
   color: $white;
+  position: relative;
 
   &--color{
     &--green{
       color: $green-dark
     }
   }
+
+  // &::after{
+  //   content: '';
+  //   position: absolute;
+  //   background: url('../../img/icons/call-answer.svg');
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //   width: 14px;
+  //   height: 14px;
+  //   fill: $white;
+  //   top: 4px;
+  //   left: -18px;
+  // }
 }

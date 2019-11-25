@@ -12,6 +12,7 @@ $why-chocco-light-grey: #f2f5f4;
 
 //feedback
 $feedback-title-black: #323232;
+$feedback-background-white: #f8faf9;
 
 //normalize
 @import "_misc/normalize.scss";
@@ -22,8 +23,10 @@ $feedback-title-black: #323232;
 @import "_misc/layout";
 
 // blocks
+@import "blocks/wrapper";
 @import "blocks/header";
 @import "blocks/nav";
+@import "blocks/logo";
 @import "blocks/phone";
 @import "blocks/pagination";
 @import "blocks/promo";

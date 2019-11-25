@@ -4,8 +4,19 @@
 }
 
 .why-chocco__item{
+  position: relative;
+  &::after{
+    content: '';
+    width: 67px;
+    height: 21px;
+    background: url('./../img/why-chocco/separator.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 18%;
+    right: -7.7rem;
+  }  
   &:last-child{
-    .why-chocco__img:after{
+    &:after{
       display: none;
     }
   }
@@ -16,19 +27,7 @@
   background-color: $why-chocco-light-grey;
   border-radius: 50%;
   position: relative;
-  margin: 0 auto;
-  
-  &::after{
-    content: '';
-    width: 67px;
-    height: 21px;
-    background: url('./../img/why-chocco/separator.png');
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 50%;
-    right: -14rem;
-    transform: translateY(-50%);
-  }  
+  margin: 0 auto;  
 }
 
 .who-chocco__icon{

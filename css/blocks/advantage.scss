@@ -8,6 +8,10 @@
 .advantage__item{
   display: flex;
   margin-right: 4.5rem;
+
+  &:last-child{
+    margin-right: 0;
+  }
 }
 .advantage__icon{
   width: 4.5rem;

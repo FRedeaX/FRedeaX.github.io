@@ -390,6 +390,10 @@ h6 {
   margin: 0;
   font-weight: normal; }
 
+p {
+  margin: 0;
+  padding: 0; }
+
 a {
   text-decoration: none; }
 
@@ -408,6 +412,10 @@ button {
   cursor: pointer;
   color: inherit; }
 
+.wrapper {
+  width: 100%;
+  overflow: hidden; }
+
 .header {
   position: absolute;
   width: 100%;
@@ -418,13 +426,6 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center; }
-
-.header__logo {
-  font-family: "Museo Sans Cyrl 500", sans-serif;
-  font-size: 2.4rem;
-  line-height: 2rem;
-  text-transform: uppercase;
-  color: #fff; }
 
 .nav__list {
   list-style: none;
@@ -439,6 +440,13 @@ button {
   color: #fff;
   padding: 0.5rem; }
 
+.logo__text {
+  font-family: "Museo Sans Cyrl 500", sans-serif;
+  font-size: 2.4rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  color: #fff; }
+
 .phone__icon {
   display: inline-block;
   width: 12px;
@@ -452,7 +460,8 @@ button {
   font-family: "Alegreya Sans", sans-serif;
   font-size: 2.4rem;
   text-transform: uppercase;
-  color: #fff; }
+  color: #fff;
+  position: relative; }
   .phone__number--color--green {
     color: #0f5a47; }
 
@@ -468,6 +477,9 @@ button {
 .pagination__item {
   position: relative;
   margin: 0.6rem 0; }
+  .pagination__item--active {
+    border: 1px solid #fff;
+    border-radius: 50%; }
 
 .pagination__link {
   display: block;
@@ -485,9 +497,6 @@ button {
     height: 5px;
     border-radius: 50%;
     background-color: #fff; }
-  .pagination__link--active {
-    border: 1px solid #fff;
-    border-radius: 50%; }
 
 .promo {
   background: url("../img/bg/sheet.png");
@@ -496,7 +505,7 @@ button {
   background-color: #61c4d9; }
   .promo::after {
     content: '';
-    background: url("/img/bg/bg-chocco.png");
+    background: url("/img/bg/5-layers.png");
     background-repeat: no-repeat;
     background-position: bottom center;
     position: absolute;
@@ -504,16 +513,17 @@ button {
     left: 50%;
     transform: translateX(-50%);
     width: 1053px;
-    height: 645px;
+    height: 345px;
     z-index: 1; }
 
 .promo__container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  height: 100%; }
+  justify-content: center;
+  height: 100%;
+  position: relative; }
 
-.promo_content {
+.promo__content {
   width: 50%;
   z-index: 2; }
 
@@ -526,8 +536,17 @@ button {
   line-height: 2.5rem;
   margin-top: 0.7rem; }
 
+.promo__img {
+  background: url("../img/bg/bg-chocco.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 16rem;
+  right: -4em;
+  width: 503px;
+  height: 523px; }
+
 .promo__advantages {
-  padding: 12rem 0 5rem 0; }
+  margin-top: 6rem; }
 
 .btn {
   font-size: 1.9rem;
@@ -554,6 +573,8 @@ button {
 .advantage__item {
   display: flex;
   margin-right: 4.5rem; }
+  .advantage__item:last-child {
+    margin-right: 0; }
 
 .advantage__icon {
   width: 4.5rem;
@@ -587,15 +608,23 @@ button {
 .about-us__description {
   margin-top: 1rem; }
 
-.about-us__content {
-  margin-bottom: 9rem; }
-
 .why-chocco__list {
   display: flex;
   justify-content: space-between; }
 
-.why-chocco__item:last-child .why-chocco__img:after {
-  display: none; }
+.why-chocco__item {
+  position: relative; }
+  .why-chocco__item::after {
+    content: '';
+    width: 67px;
+    height: 21px;
+    background: url("./../img/why-chocco/separator.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 18%;
+    right: -7.7rem; }
+  .why-chocco__item:last-child:after {
+    display: none; }
 
 .why-chocco__img {
   width: 125px;
@@ -604,16 +633,6 @@ button {
   border-radius: 50%;
   position: relative;
   margin: 0 auto; }
-  .why-chocco__img::after {
-    content: '';
-    width: 67px;
-    height: 21px;
-    background: url("./../img/why-chocco/separator.png");
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 50%;
-    right: -14rem;
-    transform: translateY(-50%); }
 
 .who-chocco__icon {
   width: 6.6rem;
@@ -665,10 +684,11 @@ button {
   height: 8rem;
   border-radius: 50%;
   overflow: hidden;
-  margin-right: 1rem;
-  cursor: pointer; }
+  margin-right: 1rem; }
   .reviews__item--active {
     border: 6px solid #0f5a47; }
+  .reviews__item:last-child {
+    margin-right: 0; }
 
 .reviews__photo {
   width: 100%;
@@ -680,7 +700,8 @@ button {
   padding: 5.1rem 4rem 3.4rem;
   background: url("../img/bg/branch.jpg");
   background-repeat: no-repeat;
-  background-position: top right; }
+  background-position: top right;
+  background-color: #f8faf9; }
 
 .feedback__photo {
   width: 25.4rem;
