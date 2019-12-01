@@ -1,26 +1,41 @@
 .about-us{
-  background: url('../img/bg/about-us__sheet.png');
+  background: url('./../img/bg/about-us__sheet.png');
   background-repeat: no-repeat;
   background-position: center left;
   background-color: $white;
+
+  @include tablets{
+    background-position: 0 27%;
+  }
+  @include phones{
+    background: none;
+  }
+
   &::after{
     content: '';
-    background: url('/img/bg/raspberry.png');
+    background: url('./../img/bg/raspberry.png');
     background-repeat: no-repeat;
     background-position: bottom left;
     position: absolute;
     bottom: -11rem;
     width: 161px;
     height: 315px;
+
+    @include phones{
+      display: none;
+    }
   }
 }
 
 .about-us__container{
-  width: 100%;
+  width: 100%;  
+  @include tablets{
+    width: 90%;
+  }
 }
 
 .about-us__titles{
-  margin: 5.7rem 0;
+  margin-bottom: 5.7rem;
 }
 
 .about-us__description{

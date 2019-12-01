@@ -1,0 +1,127 @@
+.team{
+  background: url('./../img/bg/team-sheet.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  position: relative;
+  &::before{
+    content: '';
+    width: 135px;
+    height: 112px;
+    position: absolute;
+    top: -7.5rem;
+    right: -6rem;
+    background: url('./../img/bg/team-blueberry.png');
+    background-repeat: no-repeat;
+  }
+  &::after{
+    content: '';
+    width: 104px;
+    height: 114px;
+    position: absolute;
+    bottom: -7.2rem;
+    left: -3.8rem;
+    background: url('./../img/bg/team-raspberry.png');
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+}
+
+.team__container{
+  @include tablets{
+    flex-wrap: wrap;
+    width: 62.3%;
+  }
+  @include phones{
+    width: 77.3%;
+  }
+}
+
+.team__list{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5.8rem;
+
+  @include tablets{
+    flex-wrap: wrap;
+    margin-top: 4.3rem;
+  }
+  @include phones{
+
+  }
+}
+
+.team__item{
+  width: 24%;
+  text-align: center;
+  transition: 0.35s;
+
+  @include tablets{
+    width: 47.4%;
+    height: 49%;
+    margin-bottom: 3rem;
+  }
+  @include phones{
+    width: 40%;
+    margin-bottom: 5rem;
+  }
+}
+
+.team__photo{
+  width: 100%;
+  height: 28.8rem;
+  object-fit: cover;
+  margin-bottom: 1.7rem;
+
+  @include tablets{
+    height: 32rem;
+  }
+  @include phones{
+    height: 23rem;
+  }
+}
+
+.team__toggle{
+  position: relative;
+}
+
+.team__name{
+  display: block;
+  font-size: 2.1rem;
+  position: relative;
+  cursor: pointer;
+  &::after{
+    content: '';
+    position: absolute;
+    top: 41%;
+    margin-left: 0.5rem;
+    width: 0; 
+    height: 0;
+    border-left: 4.5px solid transparent;
+    border-right: 4.5px solid transparent;
+    border-top: 6.5px solid $green-dark;
+  }
+}
+
+.team__info{
+  margin-top: 0.9rem;
+  height: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.team__description{
+  margin-top: 0.4rem;
+}
+
+.team__toggle--active{
+  .team__name{
+    &::after{
+      border-top: none;
+      border-bottom: 6.5px solid $green-dark;
+    }
+  }
+  .team__info{
+    height: auto;
+    visibility: visible;
+  }
+}

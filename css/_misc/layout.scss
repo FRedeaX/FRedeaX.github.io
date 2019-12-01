@@ -1,18 +1,20 @@
-html,
+html{
+  font-size: 10px;
+  @include tablets{
+    font-size: 9px;
+  }
+  @include phones{
+    font-size: 8px;
+  }
+}
+
 body {
   height: 100%;
-  font-size: 10px;
 }
 
 body {
   position: relative;
   font-family: "Alegreya Sans", sans-serif; //@include ubuntu();
-}
-
-.container {
-  max-width: 950px;
-  margin: 0 auto;
-  padding: 0 1rem;
 }
 
 .section {
@@ -22,6 +24,19 @@ body {
   flex-direction: column;
   justify-content: center;
   position: relative;
+
+  @include tablets{
+    min-height: 111rem;
+  }
+  @include phones{
+    min-height: 100rem;
+  }
+}
+
+.container {
+  width: 95%;
+  max-width: 94rem;
+  margin: 0 auto;
 }
 
 .title{
@@ -35,11 +50,11 @@ body {
     &--white{
       color: $white;
     }
-    &--black{
-      color: $black;
+    &--dark-grey{
+      color: $title-dark-grey;
     }
-    &--feedback{
-      color: $feedback-title-black;
+    &--green-dark{
+      color: $green-dark;
     }
   }
   &--weight{
@@ -66,6 +81,12 @@ body {
   &--color{
     &--white{
       color: $white;
+    }
+    &--black{
+      color: $color-team-position;
+    }
+    &--green{
+      color: $green-dark;
     }
   }
   &--weight{
@@ -116,4 +137,9 @@ button {
   border: none;
   cursor: pointer;
   color: inherit;
+}
+
+img, svg{
+  max-width: 100%;
+  min-height: 100%;
 }

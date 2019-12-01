@@ -1,5 +1,6 @@
 // colors
-$title-black: #0d0d0d;//поправить цвет
+$title-black: #0d0d0d;
+$title-dark-grey: #323232;
 $description-gray: #666;
 $content-background-light: #61c4d9;
 $content-background-dark: #00accf;
@@ -11,8 +12,16 @@ $green-dark: #0f5a47;
 $why-chocco-light-grey: #f2f5f4;
 
 //feedback
-$feedback-title-black: #323232;
 $feedback-background-white: #f8faf9;
+
+//team
+$color-team-position: #281e1e;
+
+//menu
+$overlay: #2f3234;
+
+//footer
+$black-footer: #010101;
 
 //normalize
 @import "_misc/normalize.scss";
@@ -20,23 +29,31 @@ $feedback-background-white: #f8faf9;
 // setups
 // @import "_misc/mixins";
 @import "_misc/fonts";
+@import "_misc/media";
 @import "_misc/layout";
 
 // blocks
+@import "blocks/btn";
 @import "blocks/wrapper";
 @import "blocks/header";
-@import "blocks/nav";
 @import "blocks/logo";
+@import "blocks/nav";
 @import "blocks/phone";
 @import "blocks/pagination";
 @import "blocks/promo";
-@import "blocks/btn";
 @import "blocks/advantage";
 @import "blocks/about-us";
 @import "blocks/why-chocco";
+@import "blocks/team";
+@import "blocks/menu";
+@import "blocks/menu-accordion";
 @import "blocks/reviews";
 @import "blocks/feedback";
-
+@import "blocks/order";
+@import "blocks/order-form";
+@import "blocks/map";
+@import "blocks/footer";
+@import "blocks/social";
 
 
 

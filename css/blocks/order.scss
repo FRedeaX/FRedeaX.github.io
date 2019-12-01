@@ -1,0 +1,31 @@
+.order{
+  background: url('./../img/bg/order.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.order__container{
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    bottom: -1.4rem;
+    left: -5rem;
+    background: url('./../img/order/blueberry.png');
+    width: 47px;
+    height: 48px;
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    bottom: -1.6rem;
+    right: -6.6rem;
+    background: url('./../img/order/sheet.png');
+    width: 135px;
+    height: 188px;
+  }
+}
+
+.order__title{
+  margin-bottom: 5rem;
+}

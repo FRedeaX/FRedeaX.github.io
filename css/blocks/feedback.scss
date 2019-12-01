@@ -1,20 +1,41 @@
 .feedback{
   display: flex;
   padding: 5.1rem 4rem 3.4rem;
-  background: url('../img/bg/branch.jpg');
+  background: url('./../img/bg/branch.jpg');
   background-repeat: no-repeat;
   background-position: top right;
-  background-color: $feedback-background-white
+  background-color: $feedback-background-white;
+
+  @include tablets{
+    flex-direction: column;
+    align-items: center;
+    padding: 5.1rem 3.4rem 3.4rem;
+  }
 }
 
 .feedback__photo{
   width: 25.4rem;
   height: 26rem;
   object-fit: cover;
+
+  @include tablets{
+    width: 23rem;
+    height: 23rem;
+    margin-bottom: 3.1rem;
+  }
+  @include phones{
+    width: 15.5rem;
+    height: 15.5rem;
+  }
 }
 
 .feedback__content{
   padding: 1rem 11.8rem 1rem 1.8rem;
+
+  @include tablets{
+    text-align: center;
+    padding: 0;
+  }
 }
 
 .feedback__title{

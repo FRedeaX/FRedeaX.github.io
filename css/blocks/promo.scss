@@ -1,56 +1,90 @@
 .promo{
-  background: url('../img/bg/sheet.png');
+  background: url('./../img/bg/sheet.png');
   background-repeat: no-repeat;
   background-position: bottom right;
   background-color: $content-background-light;
-  &::after{
-    content: '';
-    background: url('/img/bg/5-layers.png');
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    position: absolute;
-    bottom: -5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1053px;
-    height: 345px;
-    z-index: 1;
+
+  @include tablets{
+    background-position-y: top;
   }
 }
 
 .promo__container{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
+  align-items: center;
   position: relative;
+
+  @include tablets{
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    padding: 0 11%;
+  }
+  @include phones{
+    padding: 0;
+  }
 }
 
 .promo__content{
   width: 50%;
   z-index: 2;
+  @include tablets{
+    width: 100%;
+    margin-top: 3rem;
+    text-align: center;
+  }
 }
 
 .promo__title{
   font-size: 6rem;
-  line-height: 6rem;
+  line-height: 6rem;  
+  @include phones{
+    font-size: 4.6rem;
+  }
 }
 
 .promo__description{
   font-size: 2.1rem;
   line-height: 2.5rem;
-  margin-top: 0.7rem;
+  margin-top: 0.7rem;  
+  @include phones{
+    font-size: 1.8rem;
+  }  
 }
 
+.promo__btn{
+  margin-top: 3rem;  
+}
 .promo__img{
-  background: url('../img/bg/bg-chocco.png');
+  background: url('./../img/bg/promo-960.png');
   background-repeat: no-repeat;
+  background-size: contain;
   position: absolute;
-  top: 16rem;
-  right: -4em;
-  width: 503px;
-  height: 523px;
+  top: 1.6rem;
+  right: -5.4rem;
+  width: 105.3rem;
+  height: 64.5rem;
+  z-index: 1;
+
+  @include tablets{
+    content: '';
+    background: url('./../img/bg/promo-768.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 43.4rem;
+    height: 45rem;
+  }
+  @include phones{ 
+    width: 34.1rem;
+    height: 35.4rem;
+  }
 }
 .promo__advantages{
   margin-top: 6rem;
+  
+  @include tablets{
+    margin-top: 4rem;
+  }
 }

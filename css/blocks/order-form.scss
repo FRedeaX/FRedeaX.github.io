@@ -1,0 +1,123 @@
+.order-form{
+  display: flex;
+  justify-content: space-between;
+
+  @include tablets{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.order-form__col{
+  width: 49%;
+
+  @include tablets{
+    width: 64%;
+  }
+  @include phones{
+    width: 100%;
+  }
+}
+
+.order-form__row{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.7rem;
+  
+  &:last-child{
+    margin-bottom: 0;
+  }
+  
+  &--two{
+    .order-form__field{
+      width: 49%;
+    }
+  }
+  &--four{
+    .order-form__field{
+      width: 23.5%;      
+    }
+  }
+  &--pay{
+    .order-form__field{
+      flex-direction: row;
+      align-items: center;
+    }
+
+    @include tablets{
+      margin-top: 6rem;
+    }
+  }
+  &--call-back{
+    .order-form__field{
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  @include tablets{
+    margin-bottom: 2.6rem;
+    &:last-child{
+      margin-bottom: 2.6rem;
+    }
+  }
+}
+
+.order-form__field{
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+
+  @include tablets{
+    justify-content: center;
+  }
+}
+
+.order-form__input, .order-form__textarea{
+  border: none;
+  border-radius: 3px;
+  font-family: "Open Sans";
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: $black;
+  padding: 1.95rem 1.1rem;
+  margin-top: 0.4rem;
+
+  @include tablets{
+    font-size: 2rem;
+  }
+}
+
+.order-form__label{
+  margin-bottom: 0.25rem;
+}
+
+.order-form__textarea{
+  height: 18rem;
+  resize: none;
+}
+
+.order-form__radio, .order-form__checkbox{
+  margin-right: 1rem;
+}
+
+.order-form__button{
+  margin-top: 4rem;
+
+  @include tablets{
+    margin-top: 5.5rem;
+    width: max-content;
+    margin: 0 auto;
+  }
+}
+
+.order-form__submit{
+  margin-right: 1rem;
+}
+
+.order-form__clear{
+  box-shadow: none;
+  text-transform: none;
+  font-weight: 400;
+  color: $green-dark;
+}

@@ -1,10 +1,15 @@
 .advantage{
   padding: 1rem 0;
+
+  @include tablets{
+    text-align: left;
+  }
 }
+
 .advantage__list{
   display: flex;
-  // margin-top: 6.8rem;
 }
+
 .advantage__item{
   display: flex;
   margin-right: 4.5rem;
@@ -13,11 +18,25 @@
     margin-right: 0;
   }
 }
+
 .advantage__icon{
-  width: 4.5rem;
+  width: 26rem;
+  height: 4.5rem;
+  fill: transparent;
   stroke: #b0f7ff;
+  stroke-width: 0.5;
   margin-right: 1rem;
+  
+  @include tablets{
+    width: 6.24rem;
+  }
 }
+
 .advantage__description{
   font-size: 1.6rem;
+  margin: auto;
+
+  @include tablets{
+    font-size: 1.75rem;
+  }
 }

@@ -1,0 +1,128 @@
+.menu-accordion{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.menu-accordion__list{
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.menu-accordion__item{
+  display: flex;
+  cursor: pointer;
+  position: relative;
+
+  &::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10rem;
+    background-color: rgba(0, 0, 0 , 0.6);
+  }
+  &--active{
+    .menu-accordion__content{
+      width: 63rem;
+      visibility: visible;
+      padding: 5rem;
+
+      transition: width ease-out 0.8s;
+      .menu-accordion__description{
+        opacity: 1;
+
+        transition: opacity ease-out 0.45s;
+        transition-delay: 0.8s;
+      }
+    }
+  }
+}
+
+.menu-accordion__img{
+  width: 10rem;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-accordion__title{
+  padding: 4.6rem 2.4rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10rem;
+  writing-mode: tb-rl;
+  transform: rotateZ(180deg);
+  z-index: 1;
+}
+
+.menu-accordion__content{
+  width: 0;  
+
+  transition: width ease-out 0.8s;
+  transition-delay: 0.45s;
+
+  visibility: hidden;
+  cursor: default;
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $overlay;
+    opacity: 0.93;
+    z-index: -1;
+  }
+}
+
+.menu-accordion__description{  
+  font-size: 1.6rem;
+  opacity: 0;
+
+  // transition: opacity 0.45s;
+  // transition-delay: 0.45s;
+}
+
+.menu-accordion__btn{
+  width: 2.2rem;
+  height: 2.2rem;
+  position: absolute;
+  top: 2.6rem;
+  right: 3.2rem;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.4rem;
+    border-radius: 5rem;
+    background-color: #ffffffb3;
+    transform: translateY(-50%) rotate(45deg);
+    transform-origin: center;
+  }
+
+  &::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.4rem;
+    border-radius: 5rem;    
+    background-color: #ffffffb3;
+    transform: translateY(-50%) rotate(-45deg);
+    transform-origin: center;
+  }
+
+}
