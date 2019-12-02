@@ -12,7 +12,6 @@
 .promo__container{
   display: flex;
   align-items: center;
-  position: relative;
 
   @include tablets{
     flex-direction: column-reverse;
@@ -59,8 +58,8 @@
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  top: 1.6rem;
-  right: -5.4rem;
+  top: 16.2rem;
+  right: 5.6rem;
   width: 105.3rem;
   height: 64.5rem;
   z-index: 1;

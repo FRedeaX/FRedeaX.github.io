@@ -3,6 +3,12 @@
   top: 20.1rem;
   right: 7.4rem;
   z-index: 2;
+  @include tablets{
+    display: none;
+  }
+  @include phones{
+    display: none;
+  }
 }
 .pagination__list{
   list-style: none;

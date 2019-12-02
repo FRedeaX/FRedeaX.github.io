@@ -12,7 +12,7 @@
 
 .advantage__item{
   display: flex;
-  margin-right: 4.5rem;
+  // margin-right: 4.5rem;
 
   &:last-child{
     margin-right: 0;
@@ -20,21 +20,18 @@
 }
 
 .advantage__icon{
-  width: 26rem;
-  height: 4.5rem;
+  width: 5rem;
+  height: 4.2rem;
   fill: transparent;
   stroke: #b0f7ff;
   stroke-width: 0.5;
   margin-right: 1rem;
-  
-  @include tablets{
-    width: 6.24rem;
-  }
+  margin-bottom: auto;
 }
 
 .advantage__description{
   font-size: 1.6rem;
-  margin: auto;
+  width: 57%;
 
   @include tablets{
     font-size: 1.75rem;

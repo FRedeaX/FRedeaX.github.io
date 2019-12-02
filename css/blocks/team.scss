@@ -5,23 +5,25 @@
   position: relative;
   &::before{
     content: '';
-    width: 135px;
-    height: 112px;
+    width: 13.5rem;
+    height: 11.2rem;
     position: absolute;
-    top: -7.5rem;
-    right: -6rem;
+    top: -3.8rem;
+    right: 2rem;
     background: url('./../img/bg/team-blueberry.png');
     background-repeat: no-repeat;
+    background-size: contain;
   }
   &::after{
     content: '';
-    width: 104px;
-    height: 114px;
+    width: 10.4rem;
+    height: 11.4rem;
     position: absolute;
-    bottom: -7.2rem;
-    left: -3.8rem;
+    bottom: -4.4rem;
+    left: 2.2rem;
     background: url('./../img/bg/team-raspberry.png');
     background-repeat: no-repeat;
+    background-size: contain;
     z-index: 2;
   }
 }

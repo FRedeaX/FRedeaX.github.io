@@ -2,27 +2,32 @@
   background: url('./../img/bg/order.png');
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.order__container{
   position: relative;
   &::before{
     content: '';
     position: absolute;
-    bottom: -1.4rem;
-    left: -5rem;
+    bottom: 13rem;
+    left: 2rem;
     background: url('./../img/order/blueberry.png');
-    width: 47px;
-    height: 48px;
+    background-size: contain;
+    width: 4.7rem;
+    height: 4.8rem;
+    @include tablets{
+      display: none;
+    }
   }
   &::after{
     content: '';
     position: absolute;
-    bottom: -1.6rem;
-    right: -6.6rem;
+    bottom: 13rem;
+    right: 0.4rem;
     background: url('./../img/order/sheet.png');
-    width: 135px;
-    height: 188px;
+    background-size: contain;
+    width: 13.5rem;
+    height: 18.8rem;
+    @include tablets{
+      display: none;
+    }
   }
 }
 

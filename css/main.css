@@ -344,17 +344,17 @@ body {
 
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: 65rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative; }
   @media screen and (max-width: 768px) {
     .section {
-      min-height: 111rem; } }
+      min-height: 100rem; } }
   @media screen and (max-width: 480px) {
     .section {
-      min-height: 100rem; } }
+      min-height: 93.75rem; } }
 
 .container {
   width: 95%;
@@ -504,7 +504,6 @@ img, svg {
     fill: #0f5a47; }
 
 .phone__number {
-  font-family: "Alegreya Sans", sans-serif;
   font-size: 2.4rem;
   text-transform: uppercase;
   color: #fff;
@@ -517,6 +516,12 @@ img, svg {
   top: 20.1rem;
   right: 7.4rem;
   z-index: 2; }
+  @media screen and (max-width: 768px) {
+    .pagination {
+      display: none; } }
+  @media screen and (max-width: 480px) {
+    .pagination {
+      display: none; } }
 
 .pagination__list {
   list-style: none; }
@@ -556,8 +561,7 @@ img, svg {
 
 .promo__container {
   display: flex;
-  align-items: center;
-  position: relative; }
+  align-items: center; }
   @media screen and (max-width: 768px) {
     .promo__container {
       flex-direction: column-reverse;
@@ -599,8 +603,8 @@ img, svg {
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  top: 1.6rem;
-  right: -5.4rem;
+  top: 16.2rem;
+  right: 5.6rem;
   width: 105.3rem;
   height: 64.5rem;
   z-index: 1; }
@@ -636,25 +640,22 @@ img, svg {
   display: flex; }
 
 .advantage__item {
-  display: flex;
-  margin-right: 4.5rem; }
+  display: flex; }
   .advantage__item:last-child {
     margin-right: 0; }
 
 .advantage__icon {
-  width: 26rem;
-  height: 4.5rem;
+  width: 5rem;
+  height: 4.2rem;
   fill: transparent;
   stroke: #b0f7ff;
   stroke-width: 0.5;
-  margin-right: 1rem; }
-  @media screen and (max-width: 768px) {
-    .advantage__icon {
-      width: 6.24rem; } }
+  margin-right: 1rem;
+  margin-bottom: auto; }
 
 .advantage__description {
   font-size: 1.6rem;
-  margin: auto; }
+  width: 57%; }
   @media screen and (max-width: 768px) {
     .advantage__description {
       font-size: 1.75rem; } }
@@ -674,11 +675,12 @@ img, svg {
     content: '';
     background: url("./../img/bg/raspberry.png");
     background-repeat: no-repeat;
+    background-size: contain;
     background-position: bottom left;
     position: absolute;
     bottom: -11rem;
-    width: 161px;
-    height: 315px; }
+    width: 16.1rem;
+    height: 31.5rem; }
     @media screen and (max-width: 480px) {
       .about-us::after {
         display: none; } }
@@ -719,10 +721,11 @@ img, svg {
   position: relative; }
   .why-chocco__item::after {
     content: '';
-    width: 67px;
-    height: 21px;
+    width: 6.7rem;
+    height: 2.1rem;
     background: url("./../img/why-chocco/separator.png");
     background-repeat: no-repeat;
+    background-size: contain;
     position: absolute;
     top: 18%;
     right: -7.7rem; }
@@ -782,22 +785,24 @@ img, svg {
   position: relative; }
   .team::before {
     content: '';
-    width: 135px;
-    height: 112px;
+    width: 13.5rem;
+    height: 11.2rem;
     position: absolute;
-    top: -7.5rem;
-    right: -6rem;
+    top: -3.8rem;
+    right: 2rem;
     background: url("./../img/bg/team-blueberry.png");
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    background-size: contain; }
   .team::after {
     content: '';
-    width: 104px;
-    height: 114px;
+    width: 10.4rem;
+    height: 11.4rem;
     position: absolute;
-    bottom: -7.2rem;
-    left: -3.8rem;
+    bottom: -4.4rem;
+    left: 2.2rem;
     background: url("./../img/bg/team-raspberry.png");
     background-repeat: no-repeat;
+    background-size: contain;
     z-index: 2; }
 
 @media screen and (max-width: 768px) {
@@ -999,25 +1004,27 @@ img, svg {
     transform: translateY(-50%) rotate(-45deg);
     transform-origin: center; }
 
-.reviews::after {
-  content: '';
-  background: url("./../img/bg/reviews-sheet-berries.png");
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  position: absolute;
-  bottom: -13rem;
-  width: 139px;
-  height: 321px; }
 .reviews::before {
   content: '';
   background: url("./../img/bg/berry.png");
   background-repeat: no-repeat;
+  background-size: contain;
   background-position: top right;
   position: absolute;
   top: 3.6rem;
-  right: 1.4rem;
-  width: 150px;
-  height: 86px; }
+  right: -2.6rem;
+  width: 15.0rem;
+  height: 8.6rem; }
+.reviews::after {
+  content: '';
+  background: url("./../img/bg/reviews-sheet-berries.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: -16rem;
+  left: -2rem;
+  width: 13.9rem;
+  height: 32.1rem; }
 
 @media screen and (max-width: 768px) {
   .reviews__container {
@@ -1112,26 +1119,32 @@ img, svg {
 .order {
   background: url("./../img/bg/order.png");
   background-repeat: no-repeat;
-  background-size: cover; }
-
-.order__container {
+  background-size: cover;
   position: relative; }
-  .order__container::before {
+  .order::before {
     content: '';
     position: absolute;
-    bottom: -1.4rem;
-    left: -5rem;
+    bottom: 13rem;
+    left: 2rem;
     background: url("./../img/order/blueberry.png");
-    width: 47px;
-    height: 48px; }
-  .order__container::after {
+    background-size: contain;
+    width: 4.7rem;
+    height: 4.8rem; }
+    @media screen and (max-width: 768px) {
+      .order::before {
+        display: none; } }
+  .order::after {
     content: '';
     position: absolute;
-    bottom: -1.6rem;
-    right: -6.6rem;
+    bottom: 13rem;
+    right: 0.4rem;
     background: url("./../img/order/sheet.png");
-    width: 135px;
-    height: 188px; }
+    background-size: contain;
+    width: 13.5rem;
+    height: 18.8rem; }
+    @media screen and (max-width: 768px) {
+      .order::after {
+        display: none; } }
 
 .order__title {
   margin-bottom: 5rem; }
@@ -1166,12 +1179,75 @@ img, svg {
   .order-form__row--pay .order-form__field {
     flex-direction: row;
     align-items: center; }
+    .order-form__row--pay .order-form__field .order-form__radio {
+      position: absolute;
+      width: 0.01rem;
+      height: 0.01rem;
+      overflow: hidden; }
+    .order-form__row--pay .order-form__field .order-form__custom {
+      position: relative;
+      margin-right: -2.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: #fff;
+      border-radius: 50%; }
+    .order-form__row--pay .order-form__field .order-form__label {
+      line-height: 1;
+      padding: 0.4rem 0 0.3rem 3.5rem;
+      margin: 0;
+      z-index: 1; }
+    .order-form__row--pay .order-form__field .order-form__radio:checked + .order-form__custom::after {
+      content: '';
+      position: absolute;
+      width: 1.5rem;
+      height: 1.5rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #0f5a47;
+      border-radius: 50%; }
   @media screen and (max-width: 768px) {
     .order-form__row--pay {
-      margin-top: 6rem; } }
+      margin-top: 4rem; } }
   .order-form__row--call-back .order-form__field {
     flex-direction: row;
     align-items: center; }
+    .order-form__row--call-back .order-form__field .order-form__checkbox {
+      position: absolute;
+      width: 0.01rem;
+      height: 0.01rem;
+      overflow: hidden; }
+    .order-form__row--call-back .order-form__field .order-form__custom {
+      position: relative;
+      margin-right: -2.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: #fff; }
+    .order-form__row--call-back .order-form__field .order-form__label {
+      line-height: 1;
+      padding: 0.4rem 0 0.3rem 3.5rem;
+      margin: 0;
+      z-index: 1; }
+    .order-form__row--call-back .order-form__field .order-form__checkbox:checked + .order-form__custom::before {
+      content: '';
+      position: absolute;
+      width: 21%;
+      height: 0.4rem;
+      background-color: #0f5a47;
+      transform: rotate(45deg);
+      transform-origin: center;
+      top: 1.1rem;
+      left: 0.748rem; }
+    .order-form__row--call-back .order-form__field .order-form__checkbox:checked + .order-form__custom::after {
+      content: '';
+      position: absolute;
+      width: 46%;
+      height: 0.4rem;
+      background-color: #0f5a47;
+      transform: rotate(-45deg);
+      transform-origin: center;
+      top: 1.1rem;
+      right: 0.4rem; }
   @media screen and (max-width: 768px) {
     .order-form__row {
       margin-bottom: 2.6rem; }
@@ -1252,8 +1328,7 @@ img, svg {
 
 .footer__adress {
   color: #010101;
-  font-family: "Alegreya Sans";
-  font-size: 21px;
+  font-size: 2.1rem;
   font-weight: 400; }
   @media screen and (max-width: 480px) {
     .footer__adress {

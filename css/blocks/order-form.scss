@@ -42,16 +42,96 @@
     .order-form__field{
       flex-direction: row;
       align-items: center;
+      
+      .order-form__radio{
+        position: absolute;
+        width: 0.01rem;
+        height: 0.01rem;
+        overflow: hidden;
+      }
+      .order-form__custom{
+        position: relative;
+        margin-right: -2.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: $white;
+        border-radius: 50%;
+      }
+      .order-form__label{
+        line-height: 1;
+        padding: 0.4rem 0 0.3rem 3.5rem;
+        margin: 0;
+        z-index: 1;
+      }
+      // checked
+      .order-form__radio:checked + .order-form__custom{
+        &::after{
+          content: '';
+          position: absolute;
+          width: 1.5rem;
+          height: 1.5rem;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: $green-dark;
+          border-radius: 50%;
+        }
+      }
     }
 
     @include tablets{
-      margin-top: 6rem;
+      margin-top: 4rem;
     }
   }
   &--call-back{
     .order-form__field{
       flex-direction: row;
       align-items: center;
+
+      .order-form__checkbox{
+        position: absolute;
+        width: 0.01rem;
+        height: 0.01rem;
+        overflow: hidden;
+      }
+      .order-form__custom{
+        position: relative;
+        margin-right: -2.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: $white;
+      }
+      .order-form__label{
+        line-height: 1;
+        padding: 0.4rem 0 0.3rem 3.5rem;
+        margin: 0;
+        z-index: 1;
+      }
+      // checked
+      .order-form__checkbox:checked + .order-form__custom{
+        &::before{
+          content: '';
+          position: absolute;
+          width: 21%;
+          height: 0.4rem;
+          background-color: #0f5a47;
+          transform: rotate(45deg);
+          transform-origin: center;
+          top: 1.1rem;
+          left: 0.748rem;
+        }
+        &::after{
+          content: '';
+          position: absolute;
+          width: 46%;
+          height: 0.4rem;
+          background-color: #0f5a47;
+          transform: rotate(-45deg);
+          transform-origin: center;
+          top: 1.1rem;
+          right: 0.4rem;
+        }
+      }
     }
   }
 
@@ -100,6 +180,18 @@
 .order-form__radio, .order-form__checkbox{
   margin-right: 1rem;
 }
+
+// .order-form__radio{
+//   position: absolute;
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   .order-form__custom{
+//     position: absolute;
+//     width: 2.5rem;
+//     height: 2.5rem;
+//     background-color: turquoise;
+//   }
+// }
 
 .order-form__button{
   margin-top: 4rem;

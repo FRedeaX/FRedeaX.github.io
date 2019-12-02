@@ -19,17 +19,17 @@ body {
 
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: 65rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
 
   @include tablets{
-    min-height: 111rem;
+    min-height: 100rem;
   }
   @include phones{
-    min-height: 100rem;
+    min-height: 93.75rem //87.5rem;
   }
 }
 
