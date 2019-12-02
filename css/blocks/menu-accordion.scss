@@ -14,7 +14,6 @@
 
 .menu-accordion__item{
   display: flex;
-  cursor: pointer;
   position: relative;
 
   &::after{
@@ -29,13 +28,13 @@
     .menu-accordion__content{
       width: 63rem;
       visibility: visible;
-      padding: 5rem;
-
-      transition: width ease-out 0.8s;
+      transition: 0.8s;
       .menu-accordion__description{
         opacity: 1;
-
-        transition: opacity ease-out 0.45s;
+        transition-delay: 0.8s;
+      }
+      .menu-accordion__close-btn{
+        opacity: 1;
         transition-delay: 0.8s;
       }
     }
@@ -48,7 +47,7 @@
   object-fit: cover;
 }
 
-.menu-accordion__title{
+.menu-accordion__btn{
   padding: 4.6rem 2.4rem;
   position: absolute;
   top: 0;
@@ -56,40 +55,30 @@
   width: 10rem;
   writing-mode: tb-rl;
   transform: rotateZ(180deg);
+  cursor: pointer;
   z-index: 1;
 }
 
 .menu-accordion__content{
-  width: 0;  
-
-  transition: width ease-out 0.8s;
-  transition-delay: 0.45s;
-
+  width: 0;
+  transition: 0.8s;
+  transition-delay: 0.25s;
   visibility: hidden;
-  cursor: default;
   position: relative;
-  &::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: $overlay;
-    opacity: 0.93;
-    z-index: -1;
-  }
+  background-color: $overlay;
+  opacity: 0.93;
 }
 
 .menu-accordion__description{  
   font-size: 1.6rem;
+  padding: 5rem;
   opacity: 0;
-
-  // transition: opacity 0.45s;
-  // transition-delay: 0.45s;
+  transition: 0.21s;
 }
 
-.menu-accordion__btn{
+.menu-accordion__close-btn{
+  opacity: 0;
+  transition: 0.21s;
   width: 2.2rem;
   height: 2.2rem;
   position: absolute;

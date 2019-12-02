@@ -603,8 +603,9 @@ img, svg {
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  top: 16.2rem;
-  right: 5.6rem;
+  bottom: -5rem;
+  right: 50%;
+  transform: translateX(50%);
   width: 105.3rem;
   height: 64.5rem;
   z-index: 1; }
@@ -854,8 +855,7 @@ img, svg {
 .team__name {
   display: block;
   font-size: 2.1rem;
-  position: relative;
-  cursor: pointer; }
+  position: relative; }
   .team__name::after {
     content: '';
     position: absolute;
@@ -915,7 +915,6 @@ img, svg {
 
 .menu-accordion__item {
   display: flex;
-  cursor: pointer;
   position: relative; }
   .menu-accordion__item::after {
     content: '';
@@ -927,11 +926,12 @@ img, svg {
   .menu-accordion__item--active .menu-accordion__content {
     width: 63rem;
     visibility: visible;
-    padding: 5rem;
-    transition: width ease-out 0.8s; }
+    transition: 0.8s; }
     .menu-accordion__item--active .menu-accordion__content .menu-accordion__description {
       opacity: 1;
-      transition: opacity ease-out 0.45s;
+      transition-delay: 0.8s; }
+    .menu-accordion__item--active .menu-accordion__content .menu-accordion__close-btn {
+      opacity: 1;
       transition-delay: 0.8s; }
 
 .menu-accordion__img {
@@ -939,7 +939,7 @@ img, svg {
   height: 100%;
   object-fit: cover; }
 
-.menu-accordion__title {
+.menu-accordion__btn {
   padding: 4.6rem 2.4rem;
   position: absolute;
   top: 0;
@@ -947,37 +947,33 @@ img, svg {
   width: 10rem;
   writing-mode: tb-rl;
   transform: rotateZ(180deg);
+  cursor: pointer;
   z-index: 1; }
 
 .menu-accordion__content {
   width: 0;
-  transition: width ease-out 0.8s;
-  transition-delay: 0.45s;
+  transition: 0.8s;
+  transition-delay: 0.25s;
   visibility: hidden;
-  cursor: default;
-  position: relative; }
-  .menu-accordion__content::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #2f3234;
-    opacity: 0.93;
-    z-index: -1; }
+  position: relative;
+  background-color: #2f3234;
+  opacity: 0.93; }
 
 .menu-accordion__description {
   font-size: 1.6rem;
-  opacity: 0; }
+  padding: 5rem;
+  opacity: 0;
+  transition: 0.21s; }
 
-.menu-accordion__btn {
+.menu-accordion__close-btn {
+  opacity: 0;
+  transition: 0.21s;
   width: 2.2rem;
   height: 2.2rem;
   position: absolute;
   top: 2.6rem;
   right: 3.2rem; }
-  .menu-accordion__btn::before {
+  .menu-accordion__close-btn::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -990,7 +986,7 @@ img, svg {
     background-color: #ffffffb3;
     transform: translateY(-50%) rotate(45deg);
     transform-origin: center; }
-  .menu-accordion__btn::after {
+  .menu-accordion__close-btn::after {
     content: '';
     position: absolute;
     top: 50%;
