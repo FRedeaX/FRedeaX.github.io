@@ -617,8 +617,9 @@ img, svg {
       background-repeat: no-repeat;
       background-size: contain;
       position: relative;
-      top: 0;
       right: 0;
+      bottom: 0;
+      transform: translateX(0);
       width: 43.4rem;
       height: 45rem; } }
   @media screen and (max-width: 480px) {
