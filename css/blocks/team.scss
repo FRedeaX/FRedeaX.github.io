@@ -54,8 +54,23 @@
 
 .team__item{
   width: 24%;
+  height: 28.8rem;
   text-align: center;
   transition: 0.35s;
+  position: relative;
+  
+  &--active{
+    .team__name{
+      &::after{
+        border-top: none;
+        border-bottom: 6.5px solid $green-dark;
+      }
+    }
+    .team__info{
+      height: auto;
+      visibility: visible;
+    }
+  }
 
   @include tablets{
     width: 47.4%;
@@ -70,7 +85,7 @@
 
 .team__photo{
   width: 100%;
-  height: 28.8rem;
+  height: 100%;
   object-fit: cover;
   margin-bottom: 1.7rem;
 
@@ -80,10 +95,6 @@
   @include phones{
     height: 23rem;
   }
-}
-
-.team__toggle{
-  position: relative;
 }
 
 .team__name{
@@ -114,15 +125,3 @@
   margin-top: 0.4rem;
 }
 
-.team__toggle--active{
-  .team__name{
-    &::after{
-      border-top: none;
-      border-bottom: 6.5px solid $green-dark;
-    }
-  }
-  .team__info{
-    height: auto;
-    visibility: visible;
-  }
-}

@@ -63,7 +63,7 @@
   margin: 0 auto; 
   
   @include phones{
-    margin-left: 0;
+    flex-shrink: 0;
     margin-right: 2rem;
   } 
 }

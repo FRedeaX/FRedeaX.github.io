@@ -427,7 +427,8 @@ button {
   background: transparent;
   border: none;
   cursor: pointer;
-  color: inherit; }
+  color: inherit;
+  outline: none; }
 
 img, svg {
   max-width: 100%;
@@ -753,7 +754,7 @@ img, svg {
   margin: 0 auto; }
   @media screen and (max-width: 480px) {
     .why-chocco__img {
-      margin-left: 0;
+      flex-shrink: 0;
       margin-right: 2rem; } }
 
 .who-chocco__icon {
@@ -825,8 +826,16 @@ img, svg {
 
 .team__item {
   width: 24%;
+  height: 28.8rem;
   text-align: center;
-  transition: 0.35s; }
+  transition: 0.35s;
+  position: relative; }
+  .team__item--active .team__name::after {
+    border-top: none;
+    border-bottom: 6.5px solid #0f5a47; }
+  .team__item--active .team__info {
+    height: auto;
+    visibility: visible; }
   @media screen and (max-width: 768px) {
     .team__item {
       width: 47.4%;
@@ -839,7 +848,7 @@ img, svg {
 
 .team__photo {
   width: 100%;
-  height: 28.8rem;
+  height: 100%;
   object-fit: cover;
   margin-bottom: 1.7rem; }
   @media screen and (max-width: 768px) {
@@ -848,9 +857,6 @@ img, svg {
   @media screen and (max-width: 480px) {
     .team__photo {
       height: 23rem; } }
-
-.team__toggle {
-  position: relative; }
 
 .team__name {
   display: block;
@@ -875,13 +881,6 @@ img, svg {
 
 .team__description {
   margin-top: 0.4rem; }
-
-.team__toggle--active .team__name::after {
-  border-top: none;
-  border-bottom: 6.5px solid #0f5a47; }
-.team__toggle--active .team__info {
-  height: auto;
-  visibility: visible; }
 
 .menu {
   background-color: rgba(0, 0, 0, 0.2);
@@ -924,7 +923,7 @@ img, svg {
     width: 10rem;
     background-color: rgba(0, 0, 0, 0.6); }
   .menu-accordion__item--active .menu-accordion__content {
-    width: 63rem;
+    width: 52rem;
     visibility: visible;
     transition: 0.8s; }
     .menu-accordion__item--active .menu-accordion__content .menu-accordion__description {
@@ -1265,6 +1264,7 @@ img, svg {
 
 .order-form__input, .order-form__textarea {
   border: none;
+  outline: none;
   border-radius: 3px;
   font-family: "Open Sans";
   font-size: 1.8rem;

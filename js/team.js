@@ -1,12 +1,8 @@
-const teamToggleAll = document.querySelectorAll('.team__toggle'),
-      teamToggleActive = 'team__toggle--active';
+const teamToggle = document.querySelector('.team__list'),
+      teamToggleActive = 'team__item--active';
 
-teamToggleAll.forEach(teamToggle => {
-  teamToggle.addEventListener('click', ()=> {
-    if (teamToggle.classList.contains(teamToggleActive)) {
-      teamToggle.classList.toggle(teamToggleActive);     
-    } else {
-      teamToggle.classList.toggle(teamToggleActive);     
-    }
-  })
-});
+teamToggle.addEventListener('click', ()=>{
+  if(event.target.matches('a')) event.target.parentNode.classList.toggle(teamToggleActive);  
+})
+
+

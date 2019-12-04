@@ -14,7 +14,7 @@ menuToggleAll.forEach((menuToggle, menuToggleIndex) => {
       menuItem.classList.remove(menuToggleActive);
       lastMenuActive = null;     
     } else { 
-      if (menuWidth < (630 + allToggleWidth)) {
+      if (menuWidth < (520 + allToggleWidth)) {
         menuWidth -= allToggleWidth;
         menuToggle.nextElementSibling.style.width = menuWidth+'px';
       } 
@@ -26,7 +26,7 @@ menuToggleAll.forEach((menuToggle, menuToggleIndex) => {
 });
 
 const menuCloseBtnAll = document.querySelectorAll('.menu-accordion__close-btn');
-menuCloseBtnAll.forEach((menuCloseBtn, menuToggleIndex) => {  
+menuCloseBtnAll.forEach(menuCloseBtn => {  
   menuCloseBtn.addEventListener('click', ()=> {
     menuCloseBtn.parentNode.parentNode.classList.toggle(menuToggleActive);   
     lastMenuActive = null;
