@@ -16,6 +16,9 @@ body {
   position: relative;
   font-family: "Alegreya Sans", sans-serif; //@include ubuntu();
 }
+.no-scroll{
+  overflow: hidden;
+}
 
 .section {
   height: 100vh;

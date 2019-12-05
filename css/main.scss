@@ -4,6 +4,7 @@ $title-dark-grey: #323232;
 $description-gray: #666;
 $content-background-light: #61c4d9;
 $content-background-dark: #00accf;
+$overlay: #2f3234;
 $white: #fff;
 $black: #000;
 $green-dark: #0f5a47;
@@ -17,8 +18,7 @@ $feedback-background-white: #f8faf9;
 //team
 $color-team-position: #281e1e;
 
-//menu
-$overlay: #2f3234;
+
 
 //footer
 $black-footer: #010101;
@@ -34,6 +34,7 @@ $black-footer: #010101;
 
 // blocks
 @import "blocks/btn";
+@import "blocks/btn-hamburger";
 @import "blocks/wrapper";
 @import "blocks/header";
 @import "blocks/logo";

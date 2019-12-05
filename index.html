@@ -20,18 +20,22 @@
             </span>
           </a>
         </div>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item"><a href="./jsTask.html" class="nav__link">Задания по JS</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Батончики</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Команда</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Меню</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Как мы работаем</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
-          </ul>
-        </nav>
+        <div class="header__nav">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Батончики</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Команда</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Меню</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Как мы работаем</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+            </ul>
+          </nav>
+          <button class="header__hamburger btn-hamburger" type="button">
+            <div class="btn-hamburger__line"></div>
+          </button>
+        </div>
         <div class="phone">
           <svg class="phone__icon">
             <use xlink:href="./img/sprite.svg#phone"></use>
@@ -232,7 +236,7 @@
                 Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. 
                 Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
               </p>
-              <button class="menu-accordion__close-btn button" type="button"></button>
+              <button class="menu-accordion__close-btn" type="button"></button>
             </div>
           </li>
           <li class="menu-accordion__item">
@@ -254,7 +258,7 @@
                 Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. 
                 Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
               </p>
-              <button class="menu-accordion__close-btn button" type="button"></button>
+              <button class="menu-accordion__close-btn" type="button"></button>
             </div>
           </li>
         </ul>
@@ -440,6 +444,7 @@
 
   </section>
 </body>
+<script src="./js/nav.js" type="text/javascript"></script>
 <script src="./js/team.js" type="text/javascript"></script>
 <script src="./js/menu.js" type="text/javascript"></script>
 <script src="./js/map.js" type="text/javascript"></script>

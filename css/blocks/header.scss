@@ -2,15 +2,13 @@
   position: absolute;
   width: 100%;
   padding-top: 2.4rem;
-  z-index: 1;
+  z-index: 3;
   @include tablets{
-    .nav, .phone{
+    .phone{
       display: none;
     }
-  }
-  @include phones{
-    .nav, .phone{
-      display: none;
+    .header__hamburger{
+      display: block;
     }
   }
 }
@@ -18,4 +16,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include tablets{
+    position: relative;
+  }
+}
+.header__hamburger{
+  display: none;
 }

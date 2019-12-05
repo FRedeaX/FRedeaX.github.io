@@ -342,6 +342,9 @@ body {
   position: relative;
   font-family: "Alegreya Sans", sans-serif; }
 
+.no-scroll {
+  overflow: hidden; }
+
 .section {
   height: 100vh;
   min-height: 65rem;
@@ -449,6 +452,57 @@ img, svg {
     background-color: #fff;
     color: #0f5a47; }
 
+.btn-hamburger {
+  width: 2.67rem;
+  height: 2.2rem;
+  padding: 0;
+  position: relative;
+  z-index: 1; }
+  .btn-hamburger::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.4rem;
+    border-radius: 5rem;
+    background-color: #ffffffb3;
+    transform-origin: center;
+    transition: 0.35s; }
+  .btn-hamburger::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.4rem;
+    border-radius: 5rem;
+    background-color: #ffffffb3;
+    transform-origin: center;
+    transition: 0.35s; }
+  .btn-hamburger--close .btn-hamburger__line {
+    opacity: 0; }
+  .btn-hamburger--close::before {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg); }
+  .btn-hamburger--close::after {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg); }
+
+.btn-hamburger__line {
+  position: relative;
+  top: 2px;
+  width: 100%;
+  height: 0.4rem;
+  border-radius: 5rem;
+  background-color: #ffffffb3;
+  opacity: 1;
+  transition: 0.35s; }
+
 .wrapper {
   width: 100%;
   overflow: hidden; }
@@ -457,18 +511,23 @@ img, svg {
   position: absolute;
   width: 100%;
   padding-top: 2.4rem;
-  z-index: 1; }
+  z-index: 3; }
   @media screen and (max-width: 768px) {
-    .header .nav, .header .phone {
-      display: none; } }
-  @media screen and (max-width: 480px) {
-    .header .nav, .header .phone {
-      display: none; } }
+    .header .phone {
+      display: none; }
+    .header .header__hamburger {
+      display: block; } }
 
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media screen and (max-width: 768px) {
+    .header__container {
+      position: relative; } }
+
+.header__hamburger {
+  display: none; }
 
 .logo__text {
   font-family: "Museo Sans Cyrl 500", sans-serif;
@@ -476,6 +535,41 @@ img, svg {
   line-height: 2rem;
   text-transform: uppercase;
   color: #fff; }
+
+@media screen and (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    z-index: 1; }
+    .nav::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #2f3234;
+      opacity: 0.99;
+      z-index: -1; }
+    .nav--active {
+      display: block; }
+    .nav .nav__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%; }
+    .nav .nav__item {
+      text-align: center;
+      margin-top: 5rem; }
+      .nav .nav__item:first-child {
+        margin-top: 0; }
+    .nav .nav__link {
+      font-size: 4.5rem; } }
 
 .nav__list {
   list-style: none;
@@ -667,7 +761,8 @@ img, svg {
   background: url("./../img/bg/about-us__sheet.png");
   background-repeat: no-repeat;
   background-position: center left;
-  background-color: #fff; }
+  background-color: #fff;
+  z-index: -1; }
   @media screen and (max-width: 768px) {
     .about-us {
       background-position: 0 27%; } }
@@ -895,6 +990,9 @@ img, svg {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1; }
+  @media screen and (max-width: 768px) {
+    .menu {
+      min-height: 52rem; } }
 
 .menu__title {
   position: absolute;
@@ -966,7 +1064,7 @@ img, svg {
 
 .menu-accordion__description {
   font-size: 1.6rem;
-  padding: 5rem;
+  padding: 6rem 5%;
   opacity: 0;
   transition: 0.21s; }
 
@@ -975,9 +1073,10 @@ img, svg {
   transition: 0.21s;
   width: 2.2rem;
   height: 2.2rem;
+  padding: 0;
   position: absolute;
-  top: 2.6rem;
-  right: 3.2rem; }
+  top: 3%;
+  right: 4%; }
   .menu-accordion__close-btn::before {
     content: '';
     position: absolute;

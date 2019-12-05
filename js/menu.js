@@ -3,7 +3,6 @@ menuAccordionContent = document.querySelector('.menu-accordion__content'),
       menuToggleActive = 'menu-accordion__item--active';
 let lastMenuActive = 1,
     menuWidth = document.querySelector('.menu').offsetWidth,
-    // fontSize = parseInt(window.getComputedStyle(document.querySelector('html')).getPropertyValue('font-size')),
     allToggleWidth = menuToggleAll[0].offsetWidth * menuToggleAll.length;
       
 menuToggleAll.forEach((menuToggle, menuToggleIndex) => {  
@@ -12,13 +11,17 @@ menuToggleAll.forEach((menuToggle, menuToggleIndex) => {
     // если true, то нажатие произошло по активной секции
     if (menuItem.classList.contains(menuToggleActive)) {  
       menuItem.classList.remove(menuToggleActive);
-      lastMenuActive = null;     
+      lastMenuActive = null;
+      menuToggle.nextElementSibling.style.width = null;  
     } else { 
       if (menuWidth < (520 + allToggleWidth)) {
-        menuWidth -= allToggleWidth;
-        menuToggle.nextElementSibling.style.width = menuWidth+'px';
+        let mw = menuWidth - allToggleWidth;
+        menuToggle.nextElementSibling.style.width = mw +'px';
       } 
-      if (lastMenuActive) menuToggleAll[lastMenuActive - 1].parentNode.classList.toggle(menuToggleActive);       
+      if (lastMenuActive) {
+        menuToggleAll[lastMenuActive - 1].parentNode.classList.toggle(menuToggleActive);       
+        menuToggleAll[lastMenuActive - 1].nextElementSibling.style.width = null;        
+      }
       menuItem.classList.add(menuToggleActive);   
       lastMenuActive = menuToggleIndex + 1;
     }
@@ -30,6 +33,7 @@ menuCloseBtnAll.forEach(menuCloseBtn => {
   menuCloseBtn.addEventListener('click', ()=> {
     menuCloseBtn.parentNode.parentNode.classList.toggle(menuToggleActive);   
     lastMenuActive = null;
+    menuCloseBtn.parentNode.style.width = null; 
   });
 });
 

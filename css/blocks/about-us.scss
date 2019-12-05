@@ -3,6 +3,7 @@
   background-repeat: no-repeat;  
   background-position: center left;
   background-color: $white;
+  z-index: -1;
 
   @include tablets{
     background-position: 0 27%;
