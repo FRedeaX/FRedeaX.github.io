@@ -1,0 +1,49 @@
+.product__container{
+  display: flex;
+}
+.product__previous{
+  width: 2rem;
+  min-height: 100%;
+  background: url(./../img/product/arrow-previous.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.product__wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+.product__img{
+  width: 49%;
+  object-fit: cover;
+}
+.product__contant{
+  width: 49%;
+}
+
+.product__title{
+  margin-top: 3.4rem;
+}
+.product__info{
+  margin-top: 2rem;
+}
+.product__properties{
+  display: flex;
+  margin-top: 4.6rem;
+  color: $product__black;
+  font-size: 18px;
+}
+.product__calories, .product__weight{
+  &-value{
+    display: block;
+    font-weight: 700;
+  }
+}
+.product__next{
+  width: 2rem;
+  min-height: 100%;
+  background: url(./../img/product/arrow-next.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}

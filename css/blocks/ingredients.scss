@@ -1,0 +1,26 @@
+.ingredients{
+  position: relative;
+}
+
+.ingredients__btn{
+  width: 9rem;
+  height: 9rem;
+  background-color: $content-background-dark;
+  border-radius: 0.5rem;
+  position: relative;
+}
+.ingredients__btn-img{
+  width: 5.1rem;
+  height: 5.1rem;
+}
+.ingredients__btn-title{
+  color: $white;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.ingredients__list{
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
