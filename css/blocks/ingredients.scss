@@ -19,8 +19,47 @@
   text-transform: uppercase;
 }
 .ingredients__list{
-  display: none;
+  visibility: hidden;
+  height: 0;
   position: absolute;
   top: 0;
-  right: 0;
+  left: 9rem;
+  background-color: $white;
+  padding: 2.2rem 3rem;
+  border-radius: 0.5rem;
+  // transition: 1s;
+  z-index: 1;
+
+  &--active{
+    visibility: visible;
+    height: auto;
+  }
+  @include tablets{
+    right: 9rem;
+    left: auto;
+  }
+}
+.ingredients__item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.4rem;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+.ingredients__icon{
+  width: 3.6rem;
+  height: 3.6rem;
+  object-fit: contain;
+}
+.ingredients__text, .ingredients__weight{
+  font-size: 1.6rem;
+}
+.ingredients__text{
+  width: 13rem;
+  margin: 0 1rem 0 2rem;
+}
+.ingredients__weight{
+  width: max-content;
 }
