@@ -3,7 +3,6 @@
   background-repeat: no-repeat;
   background-position: bottom right;
   background-color: $background-grey;
-  // z-index: -2;
   @include tablets{
     min-height: 74rem;
   }
@@ -11,7 +10,7 @@
 .product__container{
   display: flex;
   position: relative;
-  height: 100%;//
+  height: 100%;
   @include tablets{
     position: initial;
   }
@@ -20,18 +19,17 @@
   position: absolute;
   width: 2rem;
   height: 100%;
-  // min-height: 100%;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  z-index: 2;
+  z-index: 1;
 }
 .product__previous{
   background-image: url(./../img/product/arrow-previous.png);
   left: -2rem;
   @include tablets{
-    height: 49%;
-    left: 15rem;
+    height: 66%;
+    left: 8rem;
   }
   @include phones{
     left: 1.5rem;
@@ -41,8 +39,8 @@
   background-image: url(./../img/product/arrow-next.png);
   right: -2rem;
   @include tablets{
-    height: 49%;
-    right: 15rem;
+    height: 66%;
+    right: 8rem;
   }
   @include phones{
     right: 1.5rem;
@@ -58,10 +56,15 @@
   justify-content: space-between;
   position: absolute;
   opacity: 0;
-  transition: opacity 0.55s;
+  transition: 0.55s;
+  // z-index: 0;
+  // left: 5rem;
+  transform: scale(0.94);
   &--active{
+    transform: scale(1);
+  // left: 0;
     opacity: 1;
-    z-index: 1;
+    // z-index: 1;
   }
   @include tablets{
     flex-direction: column;
@@ -69,7 +72,7 @@
   }
 }
 .product__picture{
-  width: 52%; //50%;
+  width: 50%;
   @include phones {
     width: 64%;
   }

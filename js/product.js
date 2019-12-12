@@ -5,10 +5,6 @@ const productContainer = document.querySelector('.product__container'),
       productIitemActive = 'product__item--active';
 let iActive = 0;
 
-const btnIngredients = 'button.ingredients__btn',
-      ingredientsList = document.querySelector('.ingredients__list'),
-      ingredientsListActive = 'ingredients__list--active';
-
 productContainer.addEventListener('click', (e)=>{
   // предыдущий слайд
   if(event.target.matches(btnPrevious)){
@@ -24,9 +20,6 @@ productContainer.addEventListener('click', (e)=>{
     } else {
       productToggle(0);
     }
-  // кнопка "Состав"
-  } else if (event.target.matches(btnIngredients)) {
-    event.target.nextElementSibling.classList.toggle(ingredientsListActive);
   }  
 })
 

@@ -67,8 +67,11 @@
       }
     }
     .team__info{
-      height: auto;
-      visibility: visible;
+      opacity: 1;
+      top: 2rem;
+      @include tablets{
+        // bottom: -7rem;
+      }
     }
   }
 
@@ -88,6 +91,7 @@
   height: 100%;
   object-fit: cover;
   margin-bottom: 1.7rem;
+  transition: height 0.35s;
 
   @include tablets{
     height: 32rem;
@@ -97,10 +101,15 @@
   }
 }
 
+.team__wrap{
+  position: relative;
+}
+
 .team__name{
   display: block;
   font-size: 2.1rem;
   position: relative;
+  z-index: 1;
   &::after{
     content: '';
     position: absolute;
@@ -116,9 +125,13 @@
 
 .team__info{
   margin-top: 0.9rem;
-  height: 0;
-  visibility: hidden;
   position: absolute;
+  top: 3.5rem;
+  opacity: 0;
+  transition: .5s;
+  @include tablets{
+    // bottom: -8rem;
+  }
 }
 
 .team__description{

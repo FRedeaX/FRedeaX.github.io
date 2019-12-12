@@ -15,7 +15,7 @@
 .menu-accordion__item{
   display: flex;
   position: relative;
-
+  
   &::after{
     content: '';
     position: absolute;
@@ -45,6 +45,7 @@
   width: 10rem;
   height: 100%;
   object-fit: cover;
+  transition: 0.45s;
 }
 
 .menu-accordion__btn{
@@ -63,6 +64,7 @@
   writing-mode: tb-rl;
   transform: rotateZ(180deg);
   text-align: left;
+  transition: 0.21s;
 }
 
 .menu-accordion__content{
