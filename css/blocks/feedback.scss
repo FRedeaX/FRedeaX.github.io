@@ -5,7 +5,13 @@
   background-repeat: no-repeat;
   background-position: top right;
   background-color: $background-grey;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.45s;
 
+  &--active{
+    opacity: 1;
+  }
   @include tablets{
     flex-direction: column;
     align-items: center;

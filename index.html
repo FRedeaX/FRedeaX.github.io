@@ -485,40 +485,80 @@
         <h2 class="reviews__title title title--centered">
           Отзывы
         </h2>
-        <div class="reviews__wrapper">
-          <article class="feedback">
-            <img src="./img/reviews/1.jpg" alt="Фотография Алёны Хмельницкой" class="feedback__photo">
-            <div class="feedback__content">
-              <h4 class="feedback__title title title--weight--medium title--color--dark-grey title--transform--none">
-                Лучший перекус
-              </h4>
-              <div class="feedback__description description">
-                <p>
-                  Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером 
-                  и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно 
-                  и удобно. 
-                </p>
+          <div class="reviews__content">
+            <div class="reviews__wraper">
+            <article class="feedback feedback--active">
+              <img src="./img/reviews/1.jpg" alt="Фотография Алёны Хмельницкой" class="feedback__photo">
+              <div class="feedback__content">
+                <h4 class="feedback__title title title--weight--medium title--color--dark-grey title--transform--none">
+                  Лучший перекус
+                </h4>
+                <div class="feedback__description description">
+                  <p>
+                    Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером 
+                    и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно 
+                    и удобно. 
+                  </p>
+                </div>
+                <span class="feedback__name description description--weight--medium">
+                  Алёна Хмельницкая
+                </span>
               </div>
-              <span class="feedback__name description description--weight--medium">
-                Алёна Хмельницкая
-              </span>
-            </div>
-          </article>
+            </article>
+            <article class="feedback">
+              <img src="./img/reviews/2.jpg" alt="Фотография Марии Орловой" class="feedback__photo">
+              <div class="feedback__content">
+                <h4 class="feedback__title title title--weight--medium title--color--dark-grey title--transform--none">
+                  Лучшие батончики премиум уровня
+                </h4>
+                <div class="feedback__description description">
+                  <p>
+                    Батончики понравились. На мой взгляд слегка завышена цена по сравнению с конкурентами, однако, 
+                    как говорится – оно того стоит. Нравится носить с собой, нравится держать в руке. Ну и конечно же, 
+                    кушать. Идеально утоляют голод, хоть и не надолго. Через час уже ем ещё один. Но это скорее плюс, 
+                    чем минус. 
+                  </p>
+                </div>
+                <span class="feedback__name description description--weight--medium">
+                  Мария Орлова
+                </span>
+              </div>
+            </article>
+            <article class="feedback">
+              <img src="./img/reviews/3.jpg" alt="Фотография Вадима Грачева" class="feedback__photo">
+              <div class="feedback__content">
+                <h4 class="feedback__title title title--weight--medium title--color--dark-grey title--transform--none">
+                  Идеально подходят для спортсменов
+                </h4>
+                <div class="feedback__description description">
+                  <p>
+                    После тренировок всегда хочется быстро закинуться чем-то белковым, 
+                    потому что до дома ещё нужно доехать. А кушать хочется. Протеиновые 
+                    батончики всегда выручают в этом плане. Спасибо производителю за этот 
+                    качественный и экологичный продукт.  
+                  </p>
+                </div>
+                <span class="feedback__name description description--weight--medium">
+                  Вадим Грачев
+                </span>
+              </div>
+            </article>
+          </div>
           <ul class="reviews__list">
             <li class="reviews__item reviews__item--active">
-              <a href="#!" class="reviews__link">
+              <button class="reviews__button" type="button" data-id="1">
                 <img src="./img/reviews/1.jpg" alt="Фотография Алёны Хмельницкой" class="reviews__photo">
-              </a>
+              </button>
             </li>
             <li class="reviews__item">
-              <a href="#!" class="reviews__link">
+              <button class="reviews__button" type="button" data-id="2">
                 <img src="./img/reviews/2.jpg" alt="Фотография Марии Орловой" class="reviews__photo">
-              </a>
+              </button>
             </li>
             <li class="reviews__item">
-              <a href="#!" class="reviews__link">
+              <button class="reviews__button" type="button" data-id="3">
                 <img src="./img/reviews/3.jpg" alt="Фотография Вадима Грачева" class="reviews__photo">
-              </a>
+              </button>
             </li>
           </ul>
         </div>
@@ -570,7 +610,7 @@
           <div class="order-form__col">
             <div class="order-form__row">
               <div class="order-form__field">
-                <textarea  type="email" id="comment" class="order-form__textarea"></textarea>
+                <textarea  type="email" id="comment" class="order-form__textarea" required></textarea>
                 <label for="comment" class="order-form__label description description--color--green">Комментарий</label>
               </div>
             </div>
@@ -600,6 +640,12 @@
           </div>
         </form>
       </div>
+      <!-- <div class="modal">
+        <div class="modal__container">
+          <div class="modal__title">Сообщение отправлено</div>
+          <button class="modal__button btn btn--color--green" type="button">Закрыть</button>
+        </div>
+      </div> -->
     </section>
 
     <section class="section map">
@@ -663,5 +709,7 @@
 <script src="./js/product.js" type="text/javascript"></script>
 <script src="./js/team.js" type="text/javascript"></script>
 <script src="./js/menu.js" type="text/javascript"></script>
+<script src="./js/reviews.js" type="text/javascript"></script>
+<script src="./js/order.js" type="text/javascript"></script>
 <script src="./js/map.js" type="text/javascript"></script>
 </html>

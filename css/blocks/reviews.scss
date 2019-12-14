@@ -44,6 +44,10 @@
   }
 }
 
+.reviews__wraper{
+  position: relative;
+  height: 34.5rem;
+}
 
 .reviews__list{
   display: flex;
@@ -76,6 +80,11 @@
     width: 9rem;
     height: 9rem;
   }
+}
+
+.reviews__button{
+  padding: 0;
+  height: 100%;
 }
 
 .reviews__photo{

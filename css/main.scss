@@ -6,6 +6,7 @@ $content-background-light: #61c4d9;
 $content-background-dark: #00accf;
 $background-grey: #f8faf9;
 $overlay: #2f3234;
+$overlay-modal: #313436;
 $white: #fff;
 $black: #000;
 $green-dark: #0f5a47;
@@ -15,7 +16,6 @@ $why-chocco-light-grey: #f2f5f4;
 
 //product
 $product__black: #333333;
-
 
 //team
 $color-team-position: #281e1e;
@@ -54,6 +54,7 @@ $black-footer: #010101;
 @import "blocks/feedback";
 @import "blocks/order";
 @import "blocks/order-form";
+@import "blocks/modal";
 @import "blocks/map";
 @import "blocks/footer";
 @import "blocks/social";
