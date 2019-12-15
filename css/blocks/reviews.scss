@@ -44,9 +44,15 @@
   }
 }
 
+.reviews__content{
+  overflow: hidden;
+}
+
 .reviews__wraper{
+  display: flex;
   position: relative;
-  height: 34.5rem;
+  
+  transition: all 0.45s;
 }
 
 .reviews__list{

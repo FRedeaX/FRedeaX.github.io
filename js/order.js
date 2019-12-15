@@ -25,16 +25,12 @@ function order() {
       
       const xhr = new XMLHttpRequest();
       xhr.responseType = 'json';
-      xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+      xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
       xhr.send(formData);
       xhr.addEventListener('load', ()=> {
-        console.log(xhr.response);
-
         if (xhr.response.status) {
-          console.log('true');
           document.body.appendChild(createModal(xhr.response.message));
         } else {
-          console.log('false');
           document.body.appendChild(createModal(xhr.response.message));
         }
         
@@ -77,6 +73,13 @@ function createModal(content) {
   button.innerText = 'Закрыть';
   container.appendChild(title);
   container.appendChild(button);
+
+  modal.addEventListener('click', (event)=>{
+    const target = event.target;
+    if (!(target === container || target === title)) {
+      modal.remove();
+    }
+  })
 
   return modal
 };

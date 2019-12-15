@@ -56,15 +56,12 @@
   justify-content: space-between;
   position: absolute;
   opacity: 0;
-  transition: 0.55s;
-  // z-index: 0;
-  // left: 5rem;
   transform: scale(0.94);
+  transition: 0.55s;
   &--active{
     transform: scale(1);
-  // left: 0;
     opacity: 1;
-    // z-index: 1;
+    z-index: 1;
   }
   @include tablets{
     flex-direction: column;
@@ -88,6 +85,8 @@
   }
 }
 .product__structure{
+  width: 9rem;
+  height: 9rem;
   @include tablets{
     position: absolute;
     top: 2rem;
