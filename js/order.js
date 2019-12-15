@@ -79,6 +79,9 @@ function createModal(content) {
     if (!(target === container || target === title)) {
       modal.remove();
     }
+    // if (e.keyCode === 27) {
+    //   modal.remove();
+    // }
   })
 
   return modal
