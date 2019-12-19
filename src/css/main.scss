@@ -1,0 +1,32 @@
+// colors
+$title-black: #0d0d0d;
+$title-dark-grey: #323232;
+$description-gray: #666;
+$content-background-light: #61c4d9;
+$content-background-dark: #00accf;
+$background-grey: #f8faf9;
+$overlay: #2f3234;
+$overlay-modal: #313436;
+$white: #fff;
+$black: #000;
+$green-dark: #0f5a47;
+
+//colors why-chocco
+$why-chocco-light-grey: #f2f5f4;
+
+//product
+$product__black: #333333;
+
+//team
+$color-team-position: #281e1e;
+
+//footer
+$black-footer: #010101;
+
+// setups
+@import "_misc/fonts";
+@import "_misc/media";
+@import "_misc/layout";
+
+// blocks
+@import "blocks/*.scss";
