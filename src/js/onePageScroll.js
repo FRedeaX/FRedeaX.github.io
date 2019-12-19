@@ -50,4 +50,11 @@
       scroll();      
     }
   })
+  document.addEventListener('keydown', (event) => {
+    if (event.keyCode === 40) {
+      moveScroll('down');
+    } else if (event.keyCode === 38) {
+      moveScroll('up');
+    }
+  })
 })()
