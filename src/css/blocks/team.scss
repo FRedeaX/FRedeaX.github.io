@@ -1,5 +1,5 @@
 .team{
-  background: url('./../img/bg/team-sheet.png');
+  background: url('./img/bg/team-sheet.png');
   background-repeat: no-repeat;
   background-position: top right;
   position: relative;
@@ -10,7 +10,7 @@
     position: absolute;
     top: -3.8rem;
     right: 2rem;
-    background: url('./../img/bg/team-blueberry.png');
+    background: url('./img/bg/team-blueberry.png');
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -21,7 +21,7 @@
     position: absolute;
     bottom: -4.4rem;
     left: 2.2rem;
-    background: url('./../img/bg/team-raspberry.png');
+    background: url('./img/bg/team-raspberry.png');
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 2;

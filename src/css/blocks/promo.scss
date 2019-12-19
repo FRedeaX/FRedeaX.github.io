@@ -1,5 +1,5 @@
 .promo{
-  background: url('./../img/bg/sheet.png');
+  background: url('./img/bg/sheet.png');
   background-repeat: no-repeat;
   background-position: bottom right;
   background-color: $content-background-light;
@@ -54,7 +54,7 @@
   margin-top: 3rem;  
 }
 .promo__img{
-  background: url('./../img/bg/promo-960.png');
+  background: url('./img/bg/promo-960.png');
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
@@ -67,7 +67,7 @@
 
   @include tablets{
     content: '';
-    background: url('./../img/bg/promo-768.png');
+    background: url('./img/bg/promo-768.png');
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;

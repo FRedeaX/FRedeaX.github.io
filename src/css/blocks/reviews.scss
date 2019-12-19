@@ -1,7 +1,7 @@
 .reviews{
   &::before{
     content: '';
-    background: url('./../img/bg/berry.png');
+    background: url('./img/bg/berry.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top right;
@@ -13,7 +13,7 @@
   }
   &::after{
     content: '';
-    background: url('./../img/bg/reviews-sheet-berries.png');
+    background: url('./img/bg/reviews-sheet-berries.png');
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
