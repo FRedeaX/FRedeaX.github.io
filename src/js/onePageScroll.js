@@ -1,6 +1,8 @@
 (function () {
   const sectionCount = (document.querySelectorAll('.section').length - 1) * -1, // используется для определения конца страницы. -1 потому что на первой странице transform не применяется. умножаем на -1(получаем отрицательное значение), что бы в дальнейшем сравнивать количество секций с номером текущей секции
         paginationList = document.querySelector('.pagination__list'),
+        navList = document.querySelector('.nav__list'),
+        orderButtons = document.querySelectorAll('.scroll-order'), // кнопки заказать в секции promo и product
         paginationAll = document.querySelectorAll('.pagination__item'),
         paginationActive = 'pagination__item--active';
   let currentActive = 0, // номер текущей секции
@@ -44,12 +46,27 @@
     moveScroll(scroll);    
   });
   paginationList.addEventListener('click', (event) => {
+    event.preventDefault()
     const target = event.target;
     if (target.classList.contains('pagination__link')) {
       currentActive = -target.dataset.scroll;
       scroll();      
     }
-  })
+  });
+  navList.addEventListener('click', (event) => {
+    event.preventDefault()
+    const target = event.target;
+    if (target.classList.contains('nav__link')) {
+      currentActive = -target.dataset.scroll;
+      scroll();      
+    }
+  });
+  orderButtons.forEach(orderButton => {
+    orderButton.addEventListener('click', () => {
+      currentActive = -orderButton.dataset.scroll;
+      scroll();
+    })
+  });
   document.addEventListener('keydown', (event) => {
     if (event.keyCode === 40) {
       moveScroll('down');
