@@ -1,4 +1,5 @@
 .reviews{
+  z-index: 2;
   &::before{
     content: '';
     background: url('./img/bg/berry.png');

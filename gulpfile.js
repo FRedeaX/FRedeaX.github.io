@@ -42,6 +42,12 @@ task("copy:img", () => {
 		.pipe(reload({ stream: true }));
 });
 
+task("copy:video", () => {
+	return src(`${SRC_PATH}/video/*.*`)
+		.pipe(dest(`${DIST_PATH}/video`))
+		.pipe(reload({ stream: true }));
+});
+
 task('styles', () => {
 	return src([...STYLE_LIBS])
 		.pipe(gulpif(env === 'dev', sourcemaps.init()))
@@ -106,6 +112,7 @@ task('default', series(
 		'copy:html',
 		'copy:font',
 		'copy:img',
+		'copy:video',
 		'styles',
 		'script',
 		'icons'
@@ -122,6 +129,7 @@ task('build', series(
 		'copy:html',
 		'copy:font',
 		'copy:img',
+		'copy:video',
 		'styles',
 		'script',
 		'icons'

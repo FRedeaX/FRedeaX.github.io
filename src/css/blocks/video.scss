@@ -1,0 +1,81 @@
+.video{
+  background-color: $background-grey;
+  position: relative;
+  z-index: 1;
+  &::after{
+    content: '';
+    background-image: url('./img/bg/sheet-video.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 24.2rem;
+    height: 26.4rem;
+    position: absolute;
+    bottom: -6.9rem;
+    right: -6.2rem;
+  }
+}
+
+.video__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  &::before{
+    content: '';
+    background-image: url('./img/bg/sheet-left.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 6.9rem;
+    height: 13.2rem;
+    position: absolute;
+    bottom: -4.4rem;
+    left: 1.1rem;
+  }
+  &::after{
+    content: '';
+    background-image: url('./img/bg/sheet-right.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 8.4rem;
+    height: 7.2rem;
+    position: absolute;
+    top: 4rem;
+    right: 2.3rem;
+  }
+}
+
+.video__wrapper{
+  margin-top: 5rem;
+  position: relative;
+}
+
+.video__player{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video__play{
+  width: 8.2rem;
+  height: 11.8rem;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  cursor: pointer;
+  transition: 0.25s;
+
+  &--disabled{
+    opacity: 0;
+    cursor: default;
+  }
+}
+
+.video__controls{
+  width: 100%;
+  height: 3.5rem;
+  background-color: $background-controls;
+  display: flex;
+  align-items: center;
+}
