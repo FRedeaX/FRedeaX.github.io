@@ -39,7 +39,7 @@
           menuToggleWidth = menuItemAll[0].querySelector('.menu-accordion__img').clientWidth; 
           for (let i = 0; i < menuItemAll.length; i++) {
             if (menuItemAll[i] === menuItem) { // нажатая(активная) li
-              menuItemAll[i].querySelector('.menu-accordion__content').style.width = menuWidth + 'px';
+              menuItemAll[i].querySelector('.menu-accordion__content').style.width = menuWidth - menuToggleWidth + 'px';
             } else {
               menuItemAll[i].querySelector('.menu-accordion__title').style.opacity = 0;
               menuItemAll[i].querySelector('.menu-accordion__img').style.width = 0;
