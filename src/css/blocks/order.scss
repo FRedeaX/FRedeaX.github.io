@@ -33,4 +33,7 @@
 
 .order__title{
   margin-bottom: 5rem;
+  @media screen and (max-width: 320px){
+    margin-bottom: 3rem;
+  }
 }

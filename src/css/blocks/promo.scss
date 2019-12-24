@@ -31,6 +31,9 @@
     margin-top: 3rem;
     text-align: center;
   }
+  @media screen and (max-width: 320px){
+    margin-top: 2rem;
+  }
 }
 
 .promo__title{
@@ -38,6 +41,9 @@
   line-height: 6rem;  
   @include phones{
     font-size: 4.6rem;
+  }
+  @media screen and (max-width: 320px){
+    line-height: 4.6rem;
   }
 }
 
@@ -81,11 +87,19 @@
     width: 34.1rem;
     height: 35.4rem;
   }
+  @media screen and (max-width: 320px){
+    width: 24.1rem;
+    height: 25.4rem;
+  }
 }
 .promo__advantages{
   margin-top: 6rem;
   
   @include tablets{
     margin-top: 4rem;
+  }
+  @media screen and (max-width: 320px){
+    margin-top: 2rem;
+
   }
 }

@@ -6,8 +6,10 @@
         paginationAll = document.querySelectorAll('.pagination__item'),
         paginationActive = 'pagination__item--active';
   let currentActive = 0, // номер текущей секции
+      touch = [], // запоминаем 2 значение clientY при событии touch для определения направления сколла
       lastActive = 0, // последняя активная секция (используется для того, что бы убрать активный класс с пагинации)
       isScroll = false;
+       
 
   function moveScroll(direction) {
     if(isScroll) return
@@ -36,6 +38,7 @@
       paginationAll[lastActive].classList.toggle(paginationActive); // добавляем класс
 
       isScroll = !isScroll;
+      touch = [];
     }, 650);
   }
 
@@ -68,10 +71,25 @@
     })
   });
   document.addEventListener('keydown', (event) => {
+    const tagName = event.target.tagName.toLowerCase();
+    const userTypingInInputs = tagName === 'input' || tagName === 'textarea';
+
+    if (userTypingInInputs) return
+    
     if (event.keyCode === 40) {
       moveScroll('down');
     } else if (event.keyCode === 38) {
       moveScroll('up');
     }
   })
+  document.addEventListener("touchmove", (event) =>{
+    const deltaY = event.changedTouches[0].clientY; 
+    touch.push(deltaY);
+    if (touch.length === 2) {
+      const scroll = (touch[0] > touch[1]) ? 'down' : 'up';
+      moveScroll(scroll);
+      return
+    }
+  });
+  
 })()

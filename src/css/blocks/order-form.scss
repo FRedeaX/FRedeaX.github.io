@@ -82,6 +82,9 @@
     @include tablets{
       margin-top: 4rem;
     }
+    @media screen and (max-width: 320px){
+      margin-top: 2rem;
+    }
   }
   &--call-back{
     .order-form__field{
@@ -141,6 +144,12 @@
       margin-bottom: 2.6rem;
     }
   }
+  @media screen and (max-width: 320px){
+    margin-bottom: 1.6rem;
+    &:last-child{
+      margin-bottom: 1.6rem;
+    }
+  }
 }
 
 .order-form__field{
@@ -167,6 +176,9 @@
   @include tablets{
     font-size: 2rem;
   }
+  @media screen and (max-width: 320px){
+    padding: 0.95rem 1.1rem;
+  }
 }
 
 .order-form__label{
@@ -176,6 +188,9 @@
 .order-form__textarea{
   height: 18rem;
   resize: none;
+  @media screen and (max-width: 320px){
+    height: 10rem;
+  }
 }
 
 .order-form__radio, .order-form__checkbox{

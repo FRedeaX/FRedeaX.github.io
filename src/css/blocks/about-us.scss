@@ -41,5 +41,12 @@
 }
 
 .about-us__description{
-  margin-top: 1rem;
+  width: 50%;
+  margin: 1rem auto 0 auto;
+  @include tablets{
+    width: 60%;
+  }
+  @include phones{
+    width: 100%;
+  }
 }

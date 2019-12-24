@@ -26,6 +26,15 @@
     background-size: contain;
     z-index: 2;
   }
+  @media screen and (max-width: 320px){
+    &::before{      
+      top: -4.8rem;
+      right: -8rem;
+    }
+    &::after{
+      left: -2.8rem;
+    }
+  }
 }
 
 .team__container{
@@ -35,6 +44,9 @@
   }
   @include phones{
     width: 77.3%;
+  }
+  @media screen and (max-width: 320px){
+    width: 87%;
   }
 }
 
@@ -69,9 +81,6 @@
     .team__info{
       opacity: 1;
       top: 2rem;
-      @include tablets{
-        // bottom: -7rem;
-      }
     }
   }
 
@@ -81,9 +90,12 @@
     margin-bottom: 3rem;
   }
   @include phones{
-    width: 40%;
+    width: 46%;
     margin-bottom: 5rem;
   }
+  // @media screen and (max-width: 320px){
+  //   margin-bottom: 4rem;
+  // }
 }
 
 .team__photo{
@@ -98,6 +110,9 @@
   }
   @include phones{
     height: 23rem;
+  }
+  @media screen and (max-width: 320px){
+    height: 19rem;
   }
 }
 

@@ -12,6 +12,7 @@
     position: absolute;
     bottom: -6.9rem;
     right: -6.2rem;
+    z-index: -1;
   }
 }
 
@@ -30,6 +31,7 @@
     position: absolute;
     bottom: -4.4rem;
     left: 1.1rem;
+    z-index: -1;
   }
   &::after{
     content: '';
@@ -41,6 +43,7 @@
     position: absolute;
     top: 4rem;
     right: 2.3rem;
+    z-index: -1;
   }
 }
 
@@ -51,8 +54,10 @@
 
 .video__player{
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
+  margin-top: 5rem;
+  position: relative;
 }
 
 .video__play{
@@ -78,4 +83,5 @@
   background-color: $background-controls;
   display: flex;
   align-items: center;
+  margin-top: -3px;
 }

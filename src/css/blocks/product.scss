@@ -3,9 +3,6 @@
   background-repeat: no-repeat;
   background-position: bottom right;
   background-color: $background-grey;
-  @include tablets{
-    min-height: 74rem;
-  }
 }
 .product__container{
   display: flex;
@@ -142,4 +139,7 @@
   font-weight: lighter;
   text-transform: uppercase;
   margin-right: 3rem;
+  @media screen and (max-width: 320px){
+    font-size: 5rem;
+  }
 }

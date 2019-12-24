@@ -12,6 +12,9 @@
     align-items: center;
     padding: 5.1rem 3.4rem 3.4rem;
   }
+  @media screen and (max-width: 320px){
+    padding: 2.1rem 1.4rem 1.8rem;
+  }
 }
 
 .feedback__photo{
@@ -45,4 +48,7 @@
 .feedback__description{
   line-height: 2.15rem;
   margin: 3rem 0;
+  @media screen and (max-width: 320px){
+    margin: 2rem 0;
+  }
 }

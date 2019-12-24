@@ -11,13 +11,14 @@
     background-size: cover;
     z-index: -1;
   }
-  @include tablets{
-    min-height: 52rem;
-  }
 }
 
 .menu__title{
   position: absolute;
   top: 9.3rem;
   left: 6rem;
+  @include phones{
+    left: 2rem;
+    z-index: 2;
+  }
 }

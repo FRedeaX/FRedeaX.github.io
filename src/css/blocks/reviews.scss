@@ -1,6 +1,6 @@
 .reviews{
   z-index: 2;
-  &::before{
+  &::after{
     content: '';
     background: url('./img/bg/berry.png');
     background-repeat: no-repeat;
@@ -12,7 +12,7 @@
     width: 15.0rem;
     height: 8.6rem;
   }
-  &::after{
+  &::before{
     content: '';
     background: url('./img/bg/reviews-sheet-berries.png');
     background-repeat: no-repeat;
@@ -22,6 +22,11 @@
     left: -2rem;
     width: 13.9rem;
     height: 32.1rem;
+  }
+  @media screen and (max-width: 320px){
+    &::before{
+      display: none;
+    }
   }
 }
 
@@ -43,6 +48,9 @@
   @include phones{
     margin-bottom: 5.5rem;
   }
+  @media screen and (max-width: 320px){
+    margin-bottom: 2.5rem;
+  }
 }
 
 .reviews__content{
@@ -62,6 +70,9 @@
   margin-top: 1.5rem;
   @include tablets{
     margin-top: 6rem;
+  }
+  @media screen and (max-width: 320px){
+    margin-top: 2rem;
   }
 }
 
