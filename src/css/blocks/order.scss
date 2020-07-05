@@ -1,39 +1,39 @@
-.order{
-  background: url('./img/bg/order.png');
+.order {
+  background: url("./img/bg/order.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  &::before{
-    content: '';
+  &::before {
+    content: "";
     position: absolute;
     bottom: 13rem;
     left: 2rem;
-    background: url('./img/order/blueberry.png');
+    background: url("./img/order/blueberry.png");
     background-size: contain;
     width: 4.7rem;
     height: 4.8rem;
-    @include tablets{
+    @include tablets {
       display: none;
     }
   }
-  &::after{
-    content: '';
+  &::after {
+    content: "";
     position: absolute;
     bottom: 13rem;
     right: 0.4rem;
-    background: url('./img/order/sheet.png');
+    background: url("./img/order/sheet.png");
     background-size: contain;
     width: 13.5rem;
     height: 18.8rem;
-    @include tablets{
+    @include tablets {
       display: none;
     }
   }
 }
 
-.order__title{
+.order__title {
   margin-bottom: 5rem;
-  @media screen and (max-width: 320px){
+  @media screen and (max-width: 320px) {
     margin-bottom: 3rem;
   }
 }

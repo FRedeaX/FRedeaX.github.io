@@ -1,52 +1,51 @@
-.about-us{
-  background: url('./img/bg/about-us__sheet.png');
-  background-repeat: no-repeat;  
+.about-us {
+  background: url("./img/bg/about-us__sheet.png");
+  background-repeat: no-repeat;
   background-position: center left;
   background-color: $white;
 
-  @include tablets{
+  @include tablets {
     background-position: 0 27%;
   }
-  @include phones{
+  @include phones {
     background: none;
   }
+}
+.about-us__bg {
+  content: "";
+  // background: url('./img/bg/raspberry.png');
+  // background-repeat: no-repeat;
+  object-fit: contain;
+  background-position: bottom left;
+  position: absolute;
+  bottom: -11rem;
+  width: 16.1rem;
+  height: 31.5rem;
+  z-index: 1;
 
-  &::after{
-    content: '';
-    background: url('./img/bg/raspberry.png');
-    background-repeat: no-repeat;
-    background-size: contain;    
-    background-position: bottom left;
-    position: absolute;
-    bottom: -11rem;
-    width: 16.1rem;
-    height: 31.5rem;
-    z-index: 1;
-
-    @include phones{
-      display: none;
-    }
+  @include phones {
+    display: none;
   }
 }
 
-.about-us__container{
-  width: 100%;  
-  @include tablets{
+.about-us__container {
+  width: 100%;
+  @include tablets {
     width: 90%;
   }
 }
 
-.about-us__titles{
+.about-us__titles {
   margin-bottom: 5.7rem;
 }
 
-.about-us__description{
+.about-us__description {
   width: 50%;
   margin: 1rem auto 0 auto;
-  @include tablets{
+  @include tablets {
     width: 60%;
   }
-  @include phones{
+  @include phones {
     width: 100%;
   }
 }

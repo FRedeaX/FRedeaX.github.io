@@ -60,9 +60,9 @@
   margin-top: 3rem;
 }
 .promo__img {
-  background: url("./img/bg/promo-960.webp");
-  background-repeat: no-repeat;
-  background-size: contain;
+  // background: url("./img/bg/promo-960.webp");
+  // background-repeat: no-repeat;
+  object-fit: contain;
   position: absolute;
   bottom: -5rem;
   right: 50%;
@@ -72,10 +72,9 @@
   z-index: 1;
 
   @include tablets {
-    content: "";
-    background: url("./img/bg/promo-768.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+    // background: url("./img/bg/promo-768.png");
+    // background-repeat: no-repeat;
+    // background-size: contain;
     position: relative;
     right: 0;
     bottom: 0;
