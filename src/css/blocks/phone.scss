@@ -1,33 +1,37 @@
-.phone{
-  @include phones{
+.phone {
+  position: relative;
+  margin-left: 2rem;
+  @include phones {
     width: max-content;
     margin: 0 auto;
   }
 }
 
-.phone__icon{
-  display: inline-block;
+.phone__icon {
+  position: absolute;
+  left: -18px;
+  bottom: 5px;
   width: 1.2rem;
   height: 1.2rem;
   fill: $white;
-  margin-right: 0.6rem;
 
-  &--color{
-    &--green{
-      fill: $green-dark
+  &--color {
+    &--green {
+      fill: $green-dark;
     }
   }
 }
 
-.phone__number{
-  font-size: 24px; //2.4rem;
+.phone__number {
+  font-family: MuseoSans;
+  font-size: 1.8rem; //2.4rem;
   text-transform: uppercase;
   color: $white;
   position: relative;
 
-  &--color{
-    &--green{
-      color: $green-dark
+  &--color {
+    &--green {
+      color: $green-dark;
     }
   }
 }

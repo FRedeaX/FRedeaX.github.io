@@ -1,29 +1,60 @@
-@font-face{
-  font-family: "Alegreya Sans";
-  src: url('./fonts/AlegreyaSans-Light.ttf');
-  font-weight: 300;
-}
-@font-face{
-  font-family: "Alegreya Sans";
-  src: url('./fonts/AlegreyaSans-Regular.ttf');
-  font-weight: 400;
-}
-@font-face{
-  font-family: "Alegreya Sans";
-  src: url('./fonts/AlegreyaSans-Medium.ttf');
-  font-weight: medium;
-}
-@font-face{
-  font-family: "Alegreya Sans";
-  src: url('./fonts/AlegreyaSans-Bold.ttf');
-  font-weight: bold;
-}
-@font-face{
-  font-family: "Alegreya Sans";
-  src: url('./fonts/AlegreyaSans-ExtraBold.ttf');
-  font-weight: 900;
-}
-@font-face{
+// @font-face {
+//   font-family: "Alegreya Sans";
+//   src: local("Alegreya Sans Light"), local("Alegreya-Sans-Light"),
+//     url("./fonts/AlegreyaSans-Light.woff2") format("woff2"),
+//     url("./fonts/AlegreyaSans-Light.woff") format("woff"),
+//     url("./fonts/AlegreyaSans-Light.ttf") format("truetype");
+//   font-weight: 300;
+//   font-style: normal;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "Alegreya Sans";
+//   src: local("Alegreya Sans Regular"), local("Alegreya-Sans-Regular"),
+//     url("./fonts/AlegreyaSans-Regular.woff2") format("woff2"),
+//     url("./fonts/AlegreyaSans-Regular.woff") format("woff"),
+//     url("./fonts/AlegreyaSans-Regular.ttf") format("truetype");
+//   font-weight: 400;
+//   font-style: normal;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "Alegreya Sans";
+//   src: local("Alegreya Sans Medium"), local("Alegreya-Sans-Medium"),
+//     url("./fonts/AlegreyaSans-Medium.woff2") format("woff2"),
+//     url("./fonts/AlegreyaSans-Medium.woff") format("woff"),
+//     url("./fonts/AlegreyaSans-Medium.ttf") format("truetype");
+//   font-weight: 500;
+//   font-style: normal;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "Alegreya Sans";
+//   src: local("Alegreya Sans Bold"), local("Alegreya-Sans-Bold"),
+//     url("./fonts/AlegreyaSans-Bold.woff2") format("woff2"),
+//     url("./fonts/AlegreyaSans-Bold.woff") format("woff"),
+//     url("./fonts/AlegreyaSans-Bold.ttf") format("truetype");
+//   font-weight: 700;
+//   font-style: normal;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "Alegreya Sans";
+//   src: local("Alegreya Sans Extra Bold"), local("Alegreya-Sans-Extra-Bold"),
+//     url("./fonts/AlegreyaSans-ExtraBold.woff2") format("woff2"),
+//     url("./fonts/AlegreyaSans-ExtraBold.woff") format("woff"),
+//     url("./fonts/AlegreyaSans-ExtraBold.ttf") format("truetype");
+//   font-weight: 800;
+//   font-style: normal;
+//   font-display: swap;
+// }
+@font-face {
   font-family: "MuseoSans";
-  src: url('./fonts/MuseoSansCyrl-500.ttf');
+  src: local("Museo Sans 500"), local("Museo-Sans-500"),
+    url("./fonts/MuseoSansCyrl-500.woff2") format("woff2"),
+    url("./fonts/MuseoSansCyrl-500.woff") format("woff"),
+    url("./fonts/MuseoSansCyrl-500.ttf") format("truetype");
+  font-weight: medium;
+  font-style: medium;
+  font-display: swap;
 }

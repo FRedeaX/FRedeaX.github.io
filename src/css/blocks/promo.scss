@@ -1,66 +1,67 @@
-.promo{
-  background: url('./img/bg/sheet.png');
+.promo {
+  background: url("./img/bg/sheet.png");
   background-repeat: no-repeat;
   background-position: bottom right;
   background-color: $content-background-light;
 
-  @include tablets{
+  @include tablets {
     background-position-y: top;
   }
 }
 
-.promo__container{
+.promo__container {
   display: flex;
   align-items: center;
 
-  @include tablets{
+  @include tablets {
     flex-direction: column-reverse;
     justify-content: flex-end;
     padding: 0 11%;
   }
-  @include phones{
+  @include phones {
     padding: 0;
   }
 }
 
-.promo__content{
+.promo__content {
   width: 50%;
   z-index: 2;
-  @include tablets{
+  @include tablets {
     width: 100%;
     margin-top: 3rem;
     text-align: center;
   }
-  @media screen and (max-width: 320px){
+  @media screen and (max-width: 320px) {
     margin-top: 2rem;
   }
 }
 
-.promo__title{
+.promo__title {
   font-size: 6rem;
-  line-height: 6rem;  
-  @include phones{
+  line-height: 6rem;
+  @include phones {
     font-size: 4.6rem;
   }
-  @media screen and (max-width: 320px){
+  @media screen and (max-width: 320px) {
     line-height: 4.6rem;
   }
 }
 
-.promo__description{
+.promo__description {
   font-size: 2.1rem;
   line-height: 2.5rem;
-  margin-top: 0.7rem;  
-  @include phones{
+  margin-top: 0.7rem;
+  @include phones {
     font-size: 1.8rem;
-  }  
+  }
 }
 
-.promo__btn{
-  margin-top: 3rem;  
+.promo__btn {
+  margin-top: 3rem;
 }
-.promo__img{
-  background: url('./img/bg/promo-960.png');
+.promo__img {
+  background: url("./img/bg/promo-960.png");
+  background: url("./img/bg/promo-960.webp");
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
@@ -71,9 +72,9 @@
   height: 64.5rem;
   z-index: 1;
 
-  @include tablets{
-    content: '';
-    background: url('./img/bg/promo-768.png');
+  @include tablets {
+    content: "";
+    background: url("./img/bg/promo-768.png");
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
@@ -83,23 +84,22 @@
     width: 43.4rem;
     height: 45rem;
   }
-  @include phones{ 
+  @include phones {
     width: 34.1rem;
     height: 35.4rem;
   }
-  @media screen and (max-width: 320px){
+  @media screen and (max-width: 320px) {
     width: 24.1rem;
     height: 25.4rem;
   }
 }
-.promo__advantages{
+.promo__advantages {
   margin-top: 6rem;
-  
-  @include tablets{
+
+  @include tablets {
     margin-top: 4rem;
   }
-  @media screen and (max-width: 320px){
+  @media screen and (max-width: 320px) {
     margin-top: 2rem;
-
   }
 }
