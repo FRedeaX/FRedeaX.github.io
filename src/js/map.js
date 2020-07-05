@@ -20,7 +20,7 @@
     ];
 
     points.forEach((point) => {
-      (myPlacemark = new ymaps.Placemark(
+      const myPlacemark = new ymaps.Placemark(
         [point.x, point.y],
         {
           balloonContent: point.address,
@@ -31,8 +31,8 @@
           hideIconOnBalloonOpen: false,
           iconImageOffset: [-17, -40],
         }
-      )),
-        map.geoObjects.add(myPlacemark);
+      );
+      map.geoObjects.add(myPlacemark);
     });
   }
 })();
