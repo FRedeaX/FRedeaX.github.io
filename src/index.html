@@ -7,17 +7,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./main.css">
   <title>CHOCCO</title>
-  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap"
-    rel="stylesheet">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=76dd679b-d43f-4800-b744-f749eb0b34aa&lang=ru_RU"
-    type="text/javascript"></script>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=76dd679b-d43f-4800-b744-f749eb0b34aa&lang=ru_RU"></script> -->
 </head>
 
 <body>
   <div class="wrapper">
     <div class="pagination">
       <ul class="pagination__list">
-        <li class="pagination__item pagination__item--active"><a href="#" class="pagination__link" data-scroll="0"></a>
+        <li class="pagination__item pagination__item--active"><button type="button" class="pagination__link" data-scroll="0"></и>
         </li>
         <li class="pagination__item"><button type="button" class="pagination__link" data-scroll="1"></button></li>
         <li class="pagination__item"><button type="button" class="pagination__link" data-scroll="2"></button></li>
@@ -109,7 +107,11 @@
               </div>
             </div>
           </div>
-          <div class="promo__img"></div>
+          <!-- <div class="promo__img"></div> -->
+          <!-- <picture>
+            <source srcset="">
+          </picture> -->
+          <img class="promo__img" src="./img/bg/promo-960.png" srcset="./img/bg/promo-960.webp" alt="Батончик CHOCCO">
         </div>
       </section>
 
@@ -129,7 +131,7 @@
               <ul class="why-chocco__list">
                 <li class="why-chocco__item">
                   <div class="why-chocco__img">
-                    <img src="./img/why-chocco/why-chocco-1.svg" alt="Полезно" class="why-chocco__icon">
+                    <img src="./img/why-chocco/why-chocco-1.svg" alt="Полезно" class="why-chocco__icon" loading="lazy">
                   </div>
                   <div class="why-chocco__content">
                     <h4 class="why-chocco__title title title--transform--none">
@@ -194,7 +196,7 @@
           <ul class="product__list">
             <li class="product__item product__item--active">
               <div class="product__picture">
-                <img src="./img/product/candy-bar.png" alt="Батончик “Морские водоросли”" class="product__img">
+                <img src="./img/product/candy-bar.png" srcset="./img/product/candy-bar.webp" loading="lazy" alt="Батончик “Морские водоросли”" class="product__img">
               </div>
               <div class="product__contant">
                 <div class="product__structure">
@@ -314,7 +316,7 @@
             </li>
             <li class="product__item">
               <div class="product__picture">
-                <img src="./img/product/candy-bar-1.png" alt="Батончик “Гранола виноград”" class="product__img">
+                <img src="./img/product/candy-bar-1.png" srcset="./img/product/candy-bar-1.webp" loading="lazy" alt="Батончик “Гранола виноград”" class="product__img">
               </div>
               <div class="product__contant">
                 <div class="product__structure">
@@ -434,7 +436,7 @@
           </h2>
           <ul class="team__list">
             <li class="team__item">
-              <img src="./img/team/1.jpg" alt="Фотография Бориса Федоровича" class="team__photo">
+              <img src="./img/team/1.jpg" srcset="./img/team/1.webp" loading="lazy" alt="Фотография Бориса Федоровича" class="team__photo">
               <div class="team__wrap">
                 <a href="#!"
                   class="team__name title title--weight--medium title--color--dark-grey title--transform--none">Борис
@@ -447,7 +449,7 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./img/team/2.jpg" alt="Фотография Аллы Ивановой" class="team__photo">
+              <img src="./img/team/2.jpg" srcset="./img/team/2.webp" loading="lazy" alt="Фотография Аллы Ивановой" class="team__photo">
               <div class="team__wrap">
                 <a href="#!"
                   class="team__name title title--weight--medium title--color--dark-grey title--transform--none">Алла
@@ -460,7 +462,7 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./img/team/3.jpg" alt="Фотография Кирилла Матросова" class="team__photo">
+              <img src="./img/team/3.jpg" srcset="./img/team/3.webp" loading="lazy" alt="Фотография Кирилла Матросова" class="team__photo">
               <div class="team__wrap">
                 <a href="#!"
                   class="team__name title title--weight--medium title--color--dark-grey title--transform--none">Кирилл
@@ -473,7 +475,7 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./img/team/4.jpg" alt="Фотография Милы Рыжковой" class="team__photo">
+              <img src="./img/team/4.jpg" srcset="./img/team/4.webp" alt="Фотография Милы Рыжковой" class="team__photo">
               <div class="team__wrap">
                 <a href="#!"
                   class="team__name title title--weight--medium title--color--dark-grey title--transform--none">Мила
@@ -490,13 +492,14 @@
       </section>
 
       <section class="section menu">
+        <img class="menu__bg" src="./img/bg/bg-menu.jpg" srcset="./img/bg/bg-menu.webp" loading="lazy" alt="фоновое изображение">
         <h2 class="menu__title title title--color--white">
           Меню
         </h2>
         <div class="menu-accordion">
           <ul class="menu-accordion__list">
             <li class="menu-accordion__item">
-              <img src="./img/menu/1.jpg" alt="" class="menu-accordion__img">
+              <img src="./img/menu/1.jpg" srcset="./img/menu/1.webp" loading="lazy" alt="Батончик с молоком" class="menu-accordion__img">
               <button class="menu-accordion__btn"><span
                   class="menu-accordion__title title title--color--white title--transform--none title--weight--medium">Батончики
                   с молоком</span></button>
@@ -512,7 +515,7 @@
               </div>
             </li>
             <li class="menu-accordion__item">
-              <img src="./img/menu/2.jpg" alt="" class="menu-accordion__img">
+              <img src="./img/menu/2.jpg" srcset="./img/menu/2.webp" loading="lazy" alt="Батончик с мёдом и фруктами" class="menu-accordion__img">
               <button class="menu-accordion__btn"><span
                   class="menu-accordion__title title title--color--white title--transform--none title--weight--medium">С
                   мёдом и фруктами</span></button>
@@ -528,7 +531,7 @@
               </div>
             </li>
             <li class="menu-accordion__item">
-              <img src="./img/menu/3.jpg" alt="" class="menu-accordion__img">
+              <img src="./img/menu/3.jpg" srcset="./img/menu/3.webp" loading="lazy" alt="<Батончик дикие ягоды" class="menu-accordion__img">
               <button class="menu-accordion__btn"><span
                   class="menu-accordion__title title title--color--white title--transform--none title--weight--medium">Дикие
                   ягоды</span></button>
@@ -555,7 +558,7 @@
           <div class="reviews__content">
             <div class="reviews__wraper">
               <article class="feedback feedback--active">
-                <img src="./img/reviews/1.jpg" alt="Фотография Алёны Хмельницкой" class="feedback__photo">
+                <img src="./img/reviews/1.jpg" srcset="./img/reviews/1.webp" loading="lazy" alt="Фотография Алёны Хмельницкой" class="feedback__photo">
                 <div class="feedback__content">
                   <h4
                     class="feedback__title title title--weight--medium title--color--dark-grey title--transform--none">
@@ -576,7 +579,7 @@
                 </div>
               </article>
               <article class="feedback">
-                <img src="./img/reviews/2.jpg" alt="Фотография Марии Орловой" class="feedback__photo">
+                <img src="./img/reviews/2.jpg" srcset="./img/reviews/2.webp" loading="lazy" alt="Фотография Марии Орловой" class="feedback__photo">
                 <div class="feedback__content">
                   <h4
                     class="feedback__title title title--weight--medium title--color--dark-grey title--transform--none">
@@ -596,7 +599,7 @@
                 </div>
               </article>
               <article class="feedback">
-                <img src="./img/reviews/3.jpg" alt="Фотография Вадима Грачева" class="feedback__photo">
+                <img src="./img/reviews/3.jpg" srcset="./img/reviews/3.webp" loading="lazy" alt="Фотография Вадима Грачева" class="feedback__photo">
                 <div class="feedback__content">
                   <h4
                     class="feedback__title title title--weight--medium title--color--dark-grey title--transform--none">
@@ -619,17 +622,17 @@
             <ul class="reviews__list">
               <li class="reviews__item reviews__item--active">
                 <button class="reviews__button" type="button" data-id="1">
-                  <img src="./img/reviews/1.jpg" alt="Фотография Алёны Хмельницкой" class="reviews__photo">
+                  <img src="./img/reviews/1.jpg" srcset="./img/reviews/1.webp" loading="lazy" alt="Фотография Алёны Хмельницкой" class="reviews__photo">
                 </button>
               </li>
               <li class="reviews__item">
                 <button class="reviews__button" type="button" data-id="2">
-                  <img src="./img/reviews/2.jpg" alt="Фотография Марии Орловой" class="reviews__photo">
+                  <img src="./img/reviews/2.jpg" srcset="./img/reviews/2.webp" loading="lazy" alt="Фотография Марии Орловой" class="reviews__photo">
                 </button>
               </li>
               <li class="reviews__item">
                 <button class="reviews__button" type="button" data-id="3">
-                  <img src="./img/reviews/3.jpg" alt="Фотография Вадима Грачева" class="reviews__photo">
+                  <img src="./img/reviews/3.jpg" srcset="./img/reviews/3.webp" loading="lazy" alt="Фотография Вадима Грачева" class="reviews__photo">
                 </button>
               </li>
             </ul>
@@ -641,10 +644,10 @@
         <div class="container video__container">
           <h2 class="title title--centered">Как мы работаем</h2>
           <div  class="video__wrapper">
-            <video class="video__player play" poster="./img/video/player.jpg">
+            <video class="video__player play" poster="./img/video/player.webp">
               <source src="./video/video.mp4" type="video/mp4">
             </video>
-            <img src="./img/video/control-play-white.png" alt="Кнопка воспроизведения / оставновки" class="video__play play">
+            <img src="./img/video/control-play-white.png" loading="lazy" alt="Кнопка воспроизведения / оставновки" class="video__play play">
             <div class="video__controls">
               <div class="progress">
                 <button class="progress__play play"></button>
@@ -797,6 +800,7 @@
     </main>
   </div>
 </body>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=76dd679b-d43f-4800-b744-f749eb0b34aa&lang=ru_RU"></script>
 <script src="./main.js"></script>
 
 </html>
