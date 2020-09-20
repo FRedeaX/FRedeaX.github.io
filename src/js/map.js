@@ -1,5 +1,9 @@
 (function () {
-  window.onload = ymaps.ready(init);
+  // if (!window.ymaps) return;
+  loadScript(src).then(function () {
+    window.ymaps.ready(init);
+  });
+
   function init() {
     let map = new ymaps.Map("map", {
       center: [55.7486, 37.5986],
@@ -33,6 +37,25 @@
         }
       );
       map.geoObjects.add(myPlacemark);
+    });
+  }
+
+  const src =
+    "https://api-maps.yandex.ru/2.1/?apikey=76dd679b-d43f-4800-b744-f749eb0b34aa&lang=ru_RU";
+  function loadScript(src) {
+    return new Promise((resolve, reject) => {
+      if (window.ymaps) {
+        return resolve();
+      }
+      let script = document.createElement("script");
+      script.src = src;
+      script.addEventListener("load", function () {
+        resolve();
+      });
+      script.addEventListener("error", function (e) {
+        reject(e);
+      });
+      document.body.appendChild(script);
     });
   }
 })();
