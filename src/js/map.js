@@ -1,6 +1,6 @@
 (function () {
   // if (!window.ymaps) return;
-  loadScript(src).then(function () {
+  loadScript().then(function () {
     window.ymaps.ready(init);
   });
 
@@ -40,9 +40,9 @@
     });
   }
 
-  const src =
-    "https://api-maps.yandex.ru/2.1/?apikey=76dd679b-d43f-4800-b744-f749eb0b34aa&lang=ru_RU";
-  function loadScript(src) {
+  function loadScript() {
+    const src =
+      "https://api-maps.yandex.ru/2.1/?apikey=76dd679b-d43f-4800-b744-f749eb0b34aa&lang=ru_RU";
     return new Promise((resolve, reject) => {
       if (window.ymaps) {
         return resolve();
