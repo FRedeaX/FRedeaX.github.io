@@ -43,13 +43,13 @@
   }
 
   function loadScript() {
-    const src =
-      "https://api-maps.yandex.ru/2.1/?apikey=76dd679b-d43f-4800-b744-f749eb0b34aa&lang=ru_RU";
+    const src = `https://api-maps.yandex.ru/2.1/?load=Map,Placemark,geoObject.addon.balloon&apikey=76dd679b-d43f-4800-b744-f749eb0b34aa&lang=ru_RU`;
     return new Promise((resolve, reject) => {
       if (window.ymaps) {
         return resolve();
       }
       let script = document.createElement("script");
+      script.async = true;
       script.src = src;
       script.addEventListener("load", function () {
         resolve();
