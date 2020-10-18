@@ -1,8 +1,10 @@
 (function () {
   // if (!window.ymaps) return;
-  window.onload = loadScript().then(function () {
-    window.ymaps.ready(init);
-  });
+  window.onload = setTimeout(() => {
+    loadScript().then(function () {
+      window.ymaps.ready(init);
+    });
+  }, 400);
 
   function init() {
     let map = new ymaps.Map("map", {
