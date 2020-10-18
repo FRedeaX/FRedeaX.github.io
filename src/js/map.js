@@ -1,6 +1,6 @@
 (function () {
   // if (!window.ymaps) return;
-  loadScript().then(function () {
+  window.onload = loadScript().then(function () {
     window.ymaps.ready(init);
   });
 
